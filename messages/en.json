@@ -1,6 +1,114 @@
 {
-    "HomePage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
+    "errors": {
+        "required_error": "required*",
+        "Invalid_email": "Invalid email ID*",
+        "Incorrect_password": "Incorrect password*",
+        "Invalid_email_format": "Invalid email format*",
+        "Invalid_password_format": "Use 8+ characters with uppercase, lowercase, numbers, and symbols.",
+        "Passwords_do_not_match": "Passwords do not match",
+        "Invalid_otp": "Invalid OTP*",
+        "Time_out": "Time out*"
+    },
+    "Auth": {
+        "left_section": {
+            "source": "forget-password",
+            "auth": {
+                "text": "Explore trips or manage services",
+                "button": "Choose your role to start"
+            },
+            "sign_in": {
+                "text": "Your journey starts here. Create account to book tickets",
+                "button": "Happy Journey!"
+            },
+            "forget_password": {
+                "text": "Don’t worry! we’ll help you reset it quickly and securely.",
+                "button": "Happy Journey!"
+            }
+        },
+        "routes": {
+            "auth": "/auth",
+            "sign-in": "/auth/sign-in",
+            "login": "/auth/login",
+            "otp": "/auth/otp",
+            "forget-password": "/auth/forget-password",
+            "create-new-password": "/auth/create-new-password"
+        },
+        "auth": {
+            "traveler": {
+                "title": "Traveler",
+                "text": "Book tickets, view schedules, and manage your journeys with ease."
+            },
+            "Service_Provider": {
+                "title": "Service Provider",
+                "text": "Access your dashboard to manage trips, bookings, and customer support."
+            },
+            "select": "select"
+        },
+        "sign_up": {
+            "title": "Create new account ",
+            "inputs": {
+                "email": {
+                    "text": "Email Id",
+                    "placeholder": "Enter your email"
+                }
+            },
+            "button": "Verify OTP",
+            "or": "OR",
+            "have_account": "Already have an account?",
+            "login": "Login"
+        },
+        "otp": {
+            "title": "Enter OTP",
+            "text": "Please enter the 4-digit OTP sent to your mobile number",
+            "resend": "Resend OTP",
+            "button": "Confirm"
+        },
+        "login": {
+            "title": "login",
+            "inputs": {
+                "email": {
+                    "text": "Email Id",
+                    "placeholder": "Enter your email"
+                },
+                "password": {
+                    "text": "password",
+                    "placeholder": "Enter your password"
+                }
+            },
+            "forget_password": "Forgot password?",
+            "button": "Proceed",
+            "or": "OR",
+            "dont_have_account": "Don’t have an account?",
+            "sign_up": "Sign up"
+        },
+        "forget_password": {
+            "title": "Forgot password!",
+            "text": "Enter your email, and we'll send you an OTP to securely reset your account password.",
+            "inputs": {
+                "email": {
+                    "text": "Email Id",
+                    "placeholder": "Enter your email"
+                }
+            },
+            "button": "Verify OTP",
+            "or": "OR",
+            "have_account": "Already have an account?",
+            "login": "Login"
+        },
+        "create_new_password": {
+            "title": "Create new password",
+            "text": "Set a strong, secure password to protect your account.",
+            "inputs": {
+                "new_password": {
+                    "text": "New password",
+                    "placeholder": "Enter your password"
+                },
+                "confirm_password": {
+                    "text": "Confirm password",
+                    "placeholder": "Enter password again"
+                }
+            },
+            "button": "Confirm"
+        }
     }
 }

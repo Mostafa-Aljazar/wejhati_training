@@ -1,5 +1,5 @@
 "use client"
-// import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { ReactNode } from 'react';
 
 export default function Nuqs_Adapter({
@@ -8,6 +8,6 @@ export default function Nuqs_Adapter({
     children: ReactNode
 }) {
     return (
-        <>{children}</>
+        <NuqsAdapter>{children}</NuqsAdapter>
     );
 }

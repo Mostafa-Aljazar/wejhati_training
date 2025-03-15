@@ -15,14 +15,15 @@ interface Props {
 
 export default function Provider({ children, locale, messages }: Props) {
     return (
-        <NextIntl_Provider messages={messages} locale={locale}>
-            <Mantine_Provider>
-                <Nuqs_Adapter>
+        <Nuqs_Adapter>
+            <NextIntl_Provider messages={messages} locale={locale}>
+                <Mantine_Provider>
                     <QueryClient_Provider>
                         {children}
                     </QueryClient_Provider>
-                </Nuqs_Adapter>
-            </Mantine_Provider>
-        </NextIntl_Provider>
+                </Mantine_Provider>
+            </NextIntl_Provider>
+        </Nuqs_Adapter>
+
     );
 }
