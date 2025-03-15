@@ -16,7 +16,7 @@ export default function Left_Section() {
   useEffect(() => {
 
     if (pathname === t("routes.auth")) {
-      setContent({ text: t("auth.text"), button: t("auth.button") })
+      setContent({ text: t("left_section.auth.text"), button: t("left_section.auth.button") })
       return
     }
     else if (
