@@ -34,7 +34,7 @@ export default async function LocaleLayout({
                 <ColorSchemeScript />
             </head>
             <body>
-                <Provider messages={messages} locale={locale}>{children}</Provider>
+                <Provider messages={messages} locale={locale as "en" | "ar"}>{children}</Provider>
             </body>
         </html>
     );

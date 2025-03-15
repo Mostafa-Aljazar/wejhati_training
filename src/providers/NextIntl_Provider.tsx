@@ -3,12 +3,12 @@ import { ReactNode } from "react";
 
 interface Props {
     children: ReactNode
-    locale: string
+    locale: "en" | "ar",
     messages: AbstractIntlMessages
 }
 
 export default function NextIntl_Provider({ children, locale, messages }: Props) {
     return (
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages} locale={locale}>{children}</NextIntlClientProvider>
     );
 }

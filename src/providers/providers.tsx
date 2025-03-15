@@ -1,3 +1,4 @@
+"use client"
 import { ReactNode } from "react";
 import NextIntl_Provider from "./NextIntl_Provider";
 import { AbstractIntlMessages } from "next-intl";

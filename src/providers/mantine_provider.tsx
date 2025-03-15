@@ -1,3 +1,4 @@
+"use client"
 import { MantineProvider } from "@mantine/core";
 
 export default function Mantine_Provider({
