@@ -1,6 +1,37 @@
 {
-    "HomePage": {
-        "title": "مرحبا العالم!",
-        "about": "اذهب إلى الصفحة حول"
+  "Auth": {
+    "routes": {
+      "auth": "/auth",
+      "sign-in": "/auth/sign-in",
+      "login": "/auth/login",
+      "otp": "/auth/otp",
+      "forget-password": "/auth/forget-password",
+      "create-new-password": "/auth/create-new-password"
+    },
+    "left_section": {
+      "auth": {
+        "button": "اختر دورك للبدء"
+      },
+      "forget_password": {
+        "text": "لا تقلق! \nسنساعدك على إعادة ضبطه بسرعة وأمان.",
+        "button": "رحلة سعيدة!"
+      },
+      "sign_in": {
+        "text": "رحلتك تبدأ هنا. \nإنشاء حساب لحجز تذاكر",
+        "button": "رحلة سعيدة!"
+      }
+    },
+    "auth": {
+      "traveler": {
+        "title": "المسافر",
+        "text": "احجز تذاكر وعرض الجداول وإدارة رحلاتك بسهولة.",
+        "link": "/auth/login?type=user"
+      },
+      "Service_Provider": {
+        "title": "مزود الخدمة",
+        "text": "الوصول إلى لوحة القيادة الخاصة بك لإدارة الرحلات والحجوزات ودعم العملاء.",
+        "link": "/auth/login?type=provider"
+      }
     }
+  }
 }

@@ -19,7 +19,7 @@ export default function Auth_Layout({ children }: { children: React.ReactNode })
                     <div className='flex-1'>
                         <Left_Section />
                     </div>
-                    <div className='flex-1'>{children}</div>
+                    <div className='h-[550px]  flex-1 '>{children}</div>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@ export default function Auth_Layout({ children }: { children: React.ReactNode })
                         <Left_Section />
                     </div>
                 </div>
-                <div className="flex w-full flex-1 items-center justify-center">{children}</div>
+                <div className="flex w-full flex-1 items-center justify-center my-5">{children}</div>
             </div>
         </>
     )

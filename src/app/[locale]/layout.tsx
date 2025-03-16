@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 import Provider from '@/providers/providers';
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 
 export const metadata = {
     title: 'My Mantine app',
@@ -27,6 +27,8 @@ export default async function LocaleLayout({
         notFound();
     }
 
+    // Enable static rendering
+    setRequestLocale(locale);
     const messages = await getMessages()
     return (
         <html lang={locale} dir={`${locale == "en" ? "ltr" : "rtl"}`} {...mantineHtmlProps}>
