@@ -1,4 +1,14 @@
 {
+  "errors": {
+    "required_error": "مطلوب*",
+    "Invalid_email": "معرف بريد إلكتروني غير صالح*",
+    "Incorrect_password": "كلمة سر غير صحيحة *",
+    "Invalid_email_format": "تنسيق بريد إلكتروني غير صالح *",
+    "Invalid_password_format": "استخدم 6 + أحرف",
+    "Passwords_do_not_match": "كلمات المرور لا تتطابق",
+    "Invalid_otp": "غير صالح OTP *",
+    "Time_out": "نفذ الوقت*"
+  },
   "Auth": {
     "routes": {
       "auth": "/auth",
