@@ -29,23 +29,22 @@ export default function Login() {
   })
 
   const [type] = useQueryState('type', { defaultValue: 'provider' })
-  console.log("🚀 ~ Login ~ type:", type)
+  const [error, setError] = useState("");
 
-  const [error, setError] = useState("")
   const handleSubmit = form.onSubmit( (data: loginType) => {
     try {
-      console.log("🚀 ~ handleSubmit ~ data:", data)
+      console.log("🚀 ~ handleSubmit ~ data:", data);
 
-    } catch (error) {
-      console.log("🚀 ~ onSubmit ~ error:", error)
-    
+    } catch (error:any) {
+      console.log("🚀 ~ onSubmit ~ error:", error); 
+      setError(error?.message as string)
     }
   })
 
   return (
     <>
-      {/* Desktop */}
-      <div className=" w-full h-full flex-col items-center rounded-xl bg-white py-10 lg:py-16 lg:h-fit lg:flex lg:w-[550px]">
+      {/* Desktop & Mobile */}
+      <div className="flex  w-full h-full flex-col items-center rounded-xl bg-white py-10 lg:w-[550px]">
         <p className="text-2xl font-medium md:text-4xl text-center">{t("login.title")} 👋</p>
 
         <div className="mt-12 flex flex-col items-center justify-center">

@@ -30,7 +30,7 @@ export default function Left_Section() {
       return
     }
     else if (
-      pathname == t("routes.sign-in") ||
+      pathname == t("routes.sign-up") ||
       pathname == t("routes.login") ||
       pathname == t("routes.otp") ||
       pathname == t("routes.create-new-password")

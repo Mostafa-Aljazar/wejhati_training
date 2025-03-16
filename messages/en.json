@@ -4,7 +4,7 @@
     "Invalid_email": "Invalid email ID*",
     "Incorrect_password": "Incorrect password*",
     "Invalid_email_format": "Invalid email format*",
-    "Invalid_password_format": "Use 8+ characters with uppercase, lowercase, numbers, and symbols.",
+    "Invalid_password_format": "Use 6+ characters",
     "Passwords_do_not_match": "Passwords do not match",
     "Invalid_otp": "Invalid OTP*",
     "Time_out": "Time out*"
