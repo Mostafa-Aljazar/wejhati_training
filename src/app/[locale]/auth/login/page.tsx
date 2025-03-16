@@ -7,10 +7,11 @@ import { useForm, zodResolver } from "@mantine/form"
 import { cn } from '@/utility/cn'
 import { useState } from 'react'
 import { useQueryState } from 'nuqs'
+import { AUTH_ROUTES } from '../_routes'
 
 export default function Login() {
   const errors = useTranslations("errors")
-  const t = useTranslations("Auth")
+  const t = useTranslations("Auth.login")
 
   // Define the form schema
   const loginSchema = z.object({
@@ -45,14 +46,14 @@ export default function Login() {
     <>
       {/* Desktop & Mobile */}
       <div className="gap-10 flex  w-full h-full flex-col items-center rounded-xl bg-white lg:pt-16 pb-5 lg:w-[550px]">
-        <p className="text-2xl font-medium md:text-4xl text-center">{t("login.title")} 👋</p>
+        <p className="text-2xl font-medium md:text-4xl text-center">{t("title")} 👋</p>
 
         <div className="gap-5 flex flex-col items-center justify-center">
           <form className="gap-0 flex flex-col items-center" onSubmit={handleSubmit}>
             {/* Email Id */}
             <TextInput
-              label={<p className="text-xs font-medium text-[#817C74]">{t("login.inputs.email.text")}</p>}
-              placeholder={t("login.inputs.email.placeholder")}
+              label={<p className="text-xs font-medium text-[#817C74]">{t("inputs.email.text")}</p>}
+              placeholder={t("inputs.email.placeholder")}
               className="border-w-1 w-[343px] border-[#DFDEDC] outline-none focus:border-none md:w-[400px]"
               key={form.key("email")}
               {...form.getInputProps("email")}
@@ -63,8 +64,8 @@ export default function Login() {
 
             {/*  password */}
             <PasswordInput
-              label={<p className="text-xs font-medium text-[#817C74]">{t("login.inputs.password.text")}</p>}
-              placeholder={t("login.inputs.password.placeholder")}
+              label={<p className="text-xs font-medium text-[#817C74]">{t("inputs.password.text")}</p>}
+              placeholder={t("inputs.password.placeholder")}
               className="border-w-1 mt-5 w-[343px] border-[#DFDEDC] outline-none focus:border-none md:w-[400px]"
               key={form.key("password")}
               {...form.getInputProps("password")}
@@ -74,8 +75,8 @@ export default function Login() {
             />
 
             <div className=" flex w-full flex-row items-center">
-              <Link href={t('routes.forget-password')} className="text-sm font-normal text-[#F19A07]">
-                {t("login.forget_password")}
+              <Link href={AUTH_ROUTES.FORGET_PASSWORD} className="text-sm font-normal text-[#F19A07]">
+                {t("forget_password")}
               </Link>
             </div>
 
@@ -84,7 +85,7 @@ export default function Login() {
               type="submit"
               className={cn("mt-8 w-56 bg-[#F19A07] text-white shadow-lg max-lg:mt-10")}
               w={228}>
-              {t("login.button")}
+              {t("button")}
             </Button>
             {error ? (
               <Text fw={"500"} mt={"sm"} size="sm" ta="center" c={"red"}>
@@ -94,14 +95,14 @@ export default function Login() {
           </form>
           <div className=" flex w-full flex-row items-center">
             <span className="h-[1px] w-full flex-1 bg-[#DFDEDC]"></span>
-            <span className="mx-2 font-medium text-[#817C74]">{t("login.or")}</span>
+            <span className="mx-2 font-medium text-[#817C74]">{t("or")}</span>
             <span className="h-[1px] w-full flex-1 bg-[#DFDEDC]"></span>
           </div>
 
           <div className="text-sm font-medium text-[#817C74]">
-            {t("login.dont_have_account")}{" "}
-            <Link href={t('routes.sign-up')} className="text-[#F19A07]">
-              {t("login.sign_up")}
+            {t("dont_have_account")}{" "}
+            <Link href={AUTH_ROUTES.SIGN_UP} className="text-[#F19A07]">
+              {t("sign_up")}
             </Link>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { MoveRight } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { useQueryState } from 'nuqs'
 import { usePathname } from '@/i18n/navigation'
+import { AUTH_ROUTES } from '@/app/[locale]/auth/_routes'
 
 export default function Left_Section() {
   const [content, setContent] = useState({ text: "", button: "" })
@@ -15,13 +16,13 @@ export default function Left_Section() {
 
   useEffect(() => {
 
-    if (pathname === t("routes.auth")) {
+    if (pathname === AUTH_ROUTES.AUTH) {
       setContent({ text: t("left_section.auth.text"), button: t("left_section.auth.button") })
       return
     }
     else if (
       source == t("left_section.source") ||
-      pathname == t("routes.forget-password")
+      pathname == AUTH_ROUTES.FORGET_PASSWORD
     ) {
       setContent({
         text: t("left_section.forget_password.text"),
@@ -30,10 +31,10 @@ export default function Left_Section() {
       return
     }
     else if (
-      pathname == t("routes.sign-up") ||
-      pathname == t("routes.login") ||
-      pathname == t("routes.otp") ||
-      pathname == t("routes.create-new-password")
+      pathname == AUTH_ROUTES.SIGN_UP ||
+      pathname == AUTH_ROUTES.LOGIN ||
+      pathname == AUTH_ROUTES.OTP ||
+      pathname == AUTH_ROUTES.CREATE_NEW_PASSWORD
     ) {
       setContent({ text: t("left_section.sign_in.text"), button: t("left_section.sign_in.button") })
       return

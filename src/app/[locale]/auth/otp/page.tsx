@@ -47,7 +47,6 @@ export default function OTP() {
     setError("")
     try {
       // Add OTP verification API call here
-     
       router.push(query.callback)
     } catch (err:any) {
       setError(err.message || errors("Invalid_otp"))
@@ -61,7 +60,6 @@ export default function OTP() {
     setError("")
     try {
       // Add OTP resend API call here
-      
       const newDate = Date.now()
       setQuery({ date: newDate })
       setSeconds(60)
