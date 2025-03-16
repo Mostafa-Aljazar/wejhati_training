@@ -28,7 +28,7 @@ export default async function LocaleLayout({
     }
 
     // Enable static rendering
-    setRequestLocale(locale);
+    // setRequestLocale(locale);
     const messages = await getMessages()
     return (
         <html lang={locale} dir={`${locale == "en" ? "ltr" : "rtl"}`} {...mantineHtmlProps}>

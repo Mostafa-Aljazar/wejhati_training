@@ -12,7 +12,7 @@
   "Auth": {
     "routes": {
       "auth": "/auth",
-      "sign-in": "/auth/sign-in",
+      "sign-up": "/auth/sign-up",
       "login": "/auth/login",
       "otp": "/auth/otp",
       "forget-password": "/auth/forget-password",

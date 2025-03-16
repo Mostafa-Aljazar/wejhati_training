@@ -2,7 +2,7 @@
   "Auth": {
     "routes": {
       "auth": "/auth",
-      "sign-in": "/auth/sign-in",
+      "sign-up": "/auth/sign-up",
       "login": "/auth/login",
       "otp": "/auth/otp",
       "forget-password": "/auth/forget-password",
@@ -10,7 +10,8 @@
     },
     "left_section": {
       "auth": {
-        "button": "اختر دورك للبدء"
+        "button": "اختر دورك للبدء",
+        "text": "استكشف الرحلات أو إدارة الخدمات"
       },
       "forget_password": {
         "text": "لا تقلق! \nسنساعدك على إعادة ضبطه بسرعة وأمان.",
@@ -32,6 +33,24 @@
         "text": "الوصول إلى لوحة القيادة الخاصة بك لإدارة الرحلات والحجوزات ودعم العملاء.",
         "link": "/auth/login?type=provider"
       }
+    },
+    "login": {
+      "title": "تسجيل الدخول",
+      "inputs": {
+        "email": {
+          "text": "معرف البريد الإلكتروني",
+          "placeholder": "أدخل بريدك الإلكتروني"
+        },
+        "password": {
+          "placeholder": "أدخل كلمة المرور الخاصة بك",
+          "text": "كلمة المرور"
+        }
+      },
+      "forget_password": "هل نسيت كلمة السر؟",
+      "or": "أو",
+      "dont_have_account": "ليس لديك حساب؟",
+      "sign_up": "اشتراك",
+      "button": "يتابع"
     }
   }
 }
