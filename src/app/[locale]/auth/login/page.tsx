@@ -44,11 +44,11 @@ export default function Login() {
   return (
     <>
       {/* Desktop & Mobile */}
-      <div className="flex  w-full h-full flex-col items-center rounded-xl bg-white py-10 lg:w-[550px]">
+      <div className="gap-10 flex  w-full h-full flex-col items-center rounded-xl bg-white lg:pt-16 pb-5 lg:w-[550px]">
         <p className="text-2xl font-medium md:text-4xl text-center">{t("login.title")} 👋</p>
 
-        <div className="mt-12 flex flex-col items-center justify-center">
-          <form className="flex flex-col items-center" onSubmit={handleSubmit}>
+        <div className="gap-5 flex flex-col items-center justify-center">
+          <form className="gap-0 flex flex-col items-center" onSubmit={handleSubmit}>
             {/* Email Id */}
             <TextInput
               label={<p className="text-xs font-medium text-[#817C74]">{t("login.inputs.email.text")}</p>}
@@ -73,7 +73,7 @@ export default function Login() {
               }}
             />
 
-            <div className="mt-2 flex w-full flex-row items-center">
+            <div className=" flex w-full flex-row items-center">
               <Link href={t('routes.forget-password')} className="text-sm font-normal text-[#F19A07]">
                 {t("login.forget_password")}
               </Link>
@@ -82,7 +82,7 @@ export default function Login() {
             <Button
               loading={form.submitting}
               type="submit"
-              className={cn("mt-4 w-56 bg-[#F19A07] text-white shadow-lg max-lg:mt-10")}
+              className={cn("mt-8 w-56 bg-[#F19A07] text-white shadow-lg max-lg:mt-10")}
               w={228}>
               {t("login.button")}
             </Button>
@@ -92,13 +92,13 @@ export default function Login() {
               </Text>
             ) : null}
           </form>
-          <div className="mt-7 flex w-full flex-row items-center">
+          <div className=" flex w-full flex-row items-center">
             <span className="h-[1px] w-full flex-1 bg-[#DFDEDC]"></span>
             <span className="mx-2 font-medium text-[#817C74]">{t("login.or")}</span>
             <span className="h-[1px] w-full flex-1 bg-[#DFDEDC]"></span>
           </div>
 
-          <div className="mt-5 text-sm font-medium text-[#817C74]">
+          <div className="text-sm font-medium text-[#817C74]">
             {t("login.dont_have_account")}{" "}
             <Link href={t('routes.sign-up')} className="text-[#F19A07]">
               {t("login.sign_up")}

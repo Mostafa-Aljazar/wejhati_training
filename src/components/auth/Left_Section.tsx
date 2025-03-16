@@ -9,7 +9,7 @@ export default function Left_Section() {
   const [content, setContent] = useState({ text: "", button: "" })
 
   const pathname = usePathname()
-  const [source, setSource] = useQueryState('source')
+  const [source, setSource] = useQueryState('source',{defaultValue:""})
 
   const t = useTranslations("Auth")
 

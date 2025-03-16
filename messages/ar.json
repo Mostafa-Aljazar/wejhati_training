@@ -19,6 +19,7 @@
       "create-new-password": "/auth/create-new-password"
     },
     "left_section": {
+      "source": "forget-password",
       "auth": {
         "button": "اختر دورك للبدء",
         "text": "استكشف الرحلات أو إدارة الخدمات"
@@ -61,6 +62,25 @@
       "dont_have_account": "ليس لديك حساب؟",
       "sign_up": "اشتراك",
       "button": "يتابع"
+    },
+    "sign_up": {
+      "title": "إنشاء حساب جديد",
+      "inputs": {
+        "email": {
+          "text": "معرف البريد الإلكتروني",
+          "placeholder": "أدخل بريدك الإلكتروني"
+        }
+      },
+      "button": "تحقق من OTP",
+      "or": "أو",
+      "have_account": "هل لديك بالفعل حساب؟",
+      "login": "تسجيل الدخول"
+    },
+    "otp": {
+      "text": "الرجاء إدخال OTP المكون من 4 أرقام المرسلة إلى رقم هاتفك المحمول",
+      "resend": "إعادة إرسال OTP",
+      "button": "تأكيد",
+      "title": "أدخل OTP"
     }
   }
 }
