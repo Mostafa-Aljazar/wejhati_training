@@ -6,13 +6,17 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}', // If using App Router
   ],
   theme: {
-    extend: {},
-    screens: {
-      xs: '450px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+    extend: {
+      fontFamily: {
+        'sf-pro-display': ['SF Pro Display', 'sans-serif'],
+      },
+      screens: {
+        xs: '450px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
     },
   },
   plugins: [],
