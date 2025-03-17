@@ -7,28 +7,10 @@ import React, { useMemo } from 'react';
 import Nav_Tickets from './Nav_Tickets';
 import Languages_Switcher from './Languages_Switcher';
 import Nav_Drawer from './Nav_Drawer';
+import { NAV_ITEMS } from '@/contents/common/navbar';
 
 export default function Navbar() {
   const pathname = usePathname();
-
-  const NAV_ITEMS = [
-    {
-      text: 'Home',
-      link: '/',
-    },
-    {
-      text: 'About Us',
-      link: '/about-us',
-    },
-    {
-      text: 'Contact Us',
-      link: '/contact-us',
-    },
-    {
-      text: 'My Tickets',
-      link: 'my-tickets',
-    },
-  ];
 
   const MenuItems = useMemo(() => {
     return NAV_ITEMS.map((item) => {
