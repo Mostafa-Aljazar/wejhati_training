@@ -1,9 +1,61 @@
+'use client';
+import {
+  AppShell,
+  Burger,
+  Group,
+  rem,
+  Text,
+  UnstyledButton,
+} from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import classes from './MobileNavbar.module.css';
+import Image from 'next/image';
+import { wejhati } from '@/assets/auth';
+import { useHeadroom } from '@mantine/hooks';
+
 export default function Platform_Layout({
-    children,
-  }: {
-    children: React.ReactNode;
-  }) {
-    return (
-      <>{children}</>
-    );
-  }
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [opened, { toggle }] = useDisclosure();
+  const pinned = useHeadroom({ fixedAt: 120 });
+
+  return (
+    <AppShell
+      header={{ height: 60, collapsed: !pinned, offset: false }}
+      navbar={{
+        width: 300,
+        breakpoint: 'sm',
+        collapsed: { desktop: true, mobile: !opened },
+      }}
+      padding="md"
+    >
+      <AppShell.Header>
+        {/* <Group h="100%" px="md">
+            <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+            <Group justify="space-between" style={{ flex: 1 }}>
+             <Image src={wejhati} alt='wejhati' className='w-8 h-8'/>
+              <Group ml="xl" gap={0} visibleFrom="sm">
+                <UnstyledButton className={classes.control}>Home</UnstyledButton>
+                <UnstyledButton className={classes.control}>Blog</UnstyledButton>
+                <UnstyledButton className={classes.control}>Contacts</UnstyledButton>
+                <UnstyledButton className={classes.control}>Support</UnstyledButton>
+              </Group>
+            </Group>
+          </Group> */}
+      </AppShell.Header>
+
+      <AppShell.Navbar py="md" px={4}>
+        {/* <UnstyledButton className={classes.control}>Home</UnstyledButton>
+          <UnstyledButton className={classes.control}>Blog</UnstyledButton>
+          <UnstyledButton className={classes.control}>Contacts</UnstyledButton>
+          <UnstyledButton className={classes.control}>Support</UnstyledButton> */}
+      </AppShell.Navbar>
+
+      <AppShell.Main pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>
+        {children}
+      </AppShell.Main>
+    </AppShell>
+  );
+}
