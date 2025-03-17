@@ -1,5 +1,3 @@
 export default function Cancellation() {
-  return (
-    <div>Cancellation</div>
-  )
+  return <div>Cancellation</div>;
 }

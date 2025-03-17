@@ -1,45 +1,48 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import { MoveRight } from "lucide-react"
-import { useTranslations } from 'next-intl'
-import { useQueryState } from 'nuqs'
-import { usePathname } from '@/i18n/navigation'
-import { AUTH_ROUTES } from '@/app/[locale]/auth/_routes'
+'use client';
+import React, { useEffect, useState } from 'react';
+import { MoveRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useQueryState } from 'nuqs';
+import { usePathname } from '@/i18n/navigation';
+import { AUTH_ROUTES } from '@/contents/routes/_routes';
 
 export default function Left_Section() {
-  const [content, setContent] = useState({ text: "", button: "" })
+  const [content, setContent] = useState({ text: '', button: '' });
 
-  const pathname = usePathname()
-  const [source, setSource] = useQueryState('source',{defaultValue:""})
+  const pathname = usePathname();
+  const [source, setSource] = useQueryState('source', { defaultValue: '' });
 
-  const t = useTranslations("Auth")
+  const t = useTranslations('Auth');
 
   useEffect(() => {
-
     if (pathname === AUTH_ROUTES.AUTH) {
-      setContent({ text: t("left_section.auth.text"), button: t("left_section.auth.button") })
-      return
-    }
-    else if (
-      source == t("left_section.source") ||
+      setContent({
+        text: t('left_section.auth.text'),
+        button: t('left_section.auth.button'),
+      });
+      return;
+    } else if (
+      source == t('left_section.source') ||
       pathname == AUTH_ROUTES.FORGET_PASSWORD
     ) {
       setContent({
-        text: t("left_section.forget_password.text"),
-        button: t("left_section.forget_password.button"),
-      })
-      return
-    }
-    else if (
+        text: t('left_section.forget_password.text'),
+        button: t('left_section.forget_password.button'),
+      });
+      return;
+    } else if (
       pathname == AUTH_ROUTES.SIGN_UP ||
       pathname == AUTH_ROUTES.LOGIN ||
       pathname == AUTH_ROUTES.OTP ||
       pathname == AUTH_ROUTES.CREATE_NEW_PASSWORD
     ) {
-      setContent({ text: t("left_section.sign_in.text"), button: t("left_section.sign_in.button") })
-      return
+      setContent({
+        text: t('left_section.sign_in.text'),
+        button: t('left_section.sign_in.button'),
+      });
+      return;
     }
-  }, [])
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center lg:h-[100vh]">
@@ -53,5 +56,5 @@ export default function Left_Section() {
         </div>
       </div>
     </div>
-  )
+  );
 }

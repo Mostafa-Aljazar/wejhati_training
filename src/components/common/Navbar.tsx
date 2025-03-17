@@ -1,25 +1,14 @@
-'use client';
 import { wejhati } from '@/assets/auth';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/utility/cn';
-import {
-  AppShell,
-  Burger,
-  Button,
-  Drawer,
-  Group,
-  UnstyledButton,
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { AppShell, Button, Group } from '@mantine/core';
 import Image from 'next/image';
 import React, { useMemo } from 'react';
-import Nav_Tickets from './Nav-Tickets';
-import { CircleX } from 'lucide-react';
-import Languages_Switcher from './Languages-Switcher';
-import { squares_menu } from '@/assets/common';
+import Nav_Tickets from './Nav_Tickets';
+import Languages_Switcher from './Languages_Switcher';
+import Nav_Drawer from './Nav_Drawer';
 
 export default function Navbar() {
-  const [opened, { open, close }] = useDisclosure(false);
   const pathname = usePathname();
 
   const NAV_ITEMS = [
@@ -64,7 +53,11 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <AppShell.Header className="w-full" px="40" bg={'#231D1DC2'}>
+    <AppShell.Header
+      className="w-full"
+      px={{ base: 20, lg: 50 }}
+      bg={'#231D1DC2'}
+    >
       <Group h="100%" className="w-full">
         <Group justify="space-between" style={{ flex: 1 }}>
           <Link href={'/'} className="flex items-center justify-center">
@@ -84,25 +77,10 @@ export default function Navbar() {
                 Login
               </Button>
             </Group>
+            <Nav_Drawer />
           </Group>
         </Group>
-
-        {opened ? (
-          <CircleX width={20} height={20} color="#B9B5B1" />
-        ) : (
-          <Image
-            src={squares_menu}
-            alt="squares_menu"
-            width={20}
-            height={20}
-            onClick={open}
-          />
-        )}
       </Group>
-
-      <Drawer opened={opened} onClose={close} title="Authentication">
-        {/* Drawer content */}
-      </Drawer>
     </AppShell.Header>
   );
 }
