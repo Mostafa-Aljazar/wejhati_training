@@ -59,7 +59,9 @@ export default function Navbar() {
                 Login
               </Button>
             </Group>
-            <Nav_Drawer />
+            <Group hiddenFrom="lg">
+              <Nav_Drawer />
+            </Group>
           </Group>
         </Group>
       </Group>

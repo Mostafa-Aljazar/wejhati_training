@@ -1,4 +1,5 @@
 'use client';
+import { MY_TICKETS } from '@/contents/common/navbar';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/utility/cn';
 import { Button, Popover, Stack } from '@mantine/core';
@@ -8,36 +9,13 @@ export default function Nav_Tickets() {
   const [opened, setOpened] = useState(false);
   const pathname = usePathname();
 
-  const My_Tickets = [
-    {
-      text: 'Tickets conditions',
-      link: '/ticket-conditions',
-    },
-    {
-      text: 'Cancellation',
-      link: '/cancellation',
-    },
-    {
-      text: 'Book tickets',
-      link: '/book-tickets',
-    },
-    {
-      text: 'Booking enquirer',
-      link: '/booking-enquirer',
-    },
-    {
-      text: 'Trips schedule',
-      link: '/trips-schedule',
-    },
-  ];
-
   // Determine if any ticket link is active
   const isAnyTicketActive = useMemo(() => {
-    return My_Tickets.some((item) => item.link === pathname);
+    return MY_TICKETS.some((item) => item.link === pathname);
   }, [pathname]);
 
   const Dropdown_Items = useMemo(() => {
-    return My_Tickets.map((item) => {
+    return MY_TICKETS.map((item) => {
       const isActive = item.link === pathname;
       return (
         <Link
@@ -54,7 +32,7 @@ export default function Nav_Tickets() {
         </Link>
       );
     });
-  }, [pathname]); // Recompute only when pathname changes
+  }, [pathname]);
 
   return (
     <Popover
