@@ -12,7 +12,7 @@ export default function Platform_Layout({
 
   return (
     <AppShell
-      header={{ height: 72, offset: false }}
+      header={{ height: 72, collapsed: !pinned, offset: false }}
       navbar={{
         width: 300,
         breakpoint: 'lg',
