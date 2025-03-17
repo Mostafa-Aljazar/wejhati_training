@@ -35,7 +35,6 @@ export default async function LocaleLayout({
       lang={locale}
       dir={`${locale == 'en' ? 'ltr' : 'rtl'}`}
       {...mantineHtmlProps}
-      //   className={`${sfProDisplay.className} antialiased`}
     >
       <head>
         <ColorSchemeScript />

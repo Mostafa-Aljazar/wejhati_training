@@ -1,47 +1,27 @@
 'use client';
-import { AppShell, Burger, Group, UnstyledButton } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import classes from './test/MobileNavbar.module.css';
-import Image from 'next/image';
-import { wejhati } from '@/assets/auth';
+import { AppShell } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
+import Navbar from '@/components/common/Navbar';
 
 export default function Platform_Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [opened, { toggle }] = useDisclosure();
-  const pinned = useHeadroom({ fixedAt: 120 });
+  const pinned = useHeadroom({ fixedAt: 70 });
 
   return (
     <AppShell
-      header={{ height: 60, collapsed: !pinned, offset: false }}
+      header={{ height: 72, offset: false }}
       navbar={{
         width: 300,
-        breakpoint: 'sm',
+        breakpoint: 'lg',
         collapsed: { desktop: true, mobile: true },
       }}
-      padding="md"
+      withBorder={false}
+      // className="w-full flex flex-col"
     >
-      <AppShell.Header>
-        <Group h="100%" px="md">
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Group justify="space-between" style={{ flex: 1 }}>
-            <Image src={wejhati} alt="wejhati" className="w-8 h-8" />
-            <Group ml="xl" gap={0} visibleFrom="sm">
-              <UnstyledButton className={classes.control}>Home</UnstyledButton>
-              <UnstyledButton className={classes.control}>Blog</UnstyledButton>
-              <UnstyledButton className={classes.control}>
-                Contacts
-              </UnstyledButton>
-              <UnstyledButton className={classes.control}>
-                Support
-              </UnstyledButton>
-            </Group>
-          </Group>
-        </Group>
-      </AppShell.Header>
+      <Navbar />
       <AppShell.Main className="w-full flex-1">{children}</AppShell.Main>
     </AppShell>
   );

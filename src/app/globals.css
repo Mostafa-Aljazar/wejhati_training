@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+/* Base styles, components, or utilities can go here if needed */
+@layer base {
+  /* Optional: Add custom base styles */
+}
+
+@theme {
+  /* Custom colors */
+  --color-primary: #F19A07; /* Default primary color */
+  --color-primary-50: #fef3e0;
+  --color-primary-100: #fce7b3;
+  --color-primary-200: #f9d080;
+  --color-primary-300: #F19A07; /* Matches DEFAULT */
+  --color-primary-400: #d88906;
+  --color-primary-500: #b37205;
+
+  /* Custom font family */
+  --font-family-sf-pro-display: "SF Pro Display", sans-serif;
+
+  /* Custom screens */
+  --breakpoint-xs: 450px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
