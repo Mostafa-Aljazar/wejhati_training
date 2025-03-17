@@ -1,5 +1,7 @@
-export default function Tickets_Layout() {
-  return (
-    <div>Tickets_Layout</div>
-  )
+export default function Tickets_Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
 }

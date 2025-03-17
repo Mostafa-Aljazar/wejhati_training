@@ -2,15 +2,24 @@
 import { wejhati } from '@/assets/auth';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/utility/cn';
-import { AppShell, Burger, Button, Group, UnstyledButton } from '@mantine/core';
+import {
+  AppShell,
+  Burger,
+  Button,
+  Drawer,
+  Group,
+  UnstyledButton,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 import React, { useMemo } from 'react';
 import Nav_Tickets from './Nav-Tickets';
-import { Languages } from 'lucide-react';
+import { CircleX } from 'lucide-react';
+import Languages_Switcher from './Languages-Switcher';
+import { squares_menu } from '@/assets/common';
 
 export default function Navbar() {
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { open, close }] = useDisclosure(false);
   const pathname = usePathname();
 
   const NAV_ITEMS = [
@@ -65,20 +74,35 @@ export default function Navbar() {
             {MenuItems}
           </Group>
 
-          <Group visibleFrom="lg">
-            <Languages className="text-primary" />
-            <>
+          <Group>
+            <Languages_Switcher />
+            <Group visibleFrom="lg">
               <Button variant="outline" w={100} h={32}>
                 Log up
               </Button>
               <Button variant="outline" w={100} h={32}>
                 Login
               </Button>
-            </>
+            </Group>
           </Group>
         </Group>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="lg" size="sm" />
+
+        {opened ? (
+          <CircleX width={20} height={20} color="#B9B5B1" />
+        ) : (
+          <Image
+            src={squares_menu}
+            alt="squares_menu"
+            width={20}
+            height={20}
+            onClick={open}
+          />
+        )}
       </Group>
+
+      <Drawer opened={opened} onClose={close} title="Authentication">
+        {/* Drawer content */}
+      </Drawer>
     </AppShell.Header>
   );
 }
