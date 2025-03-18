@@ -19,10 +19,12 @@ export default function Platform_Layout({
         collapsed: { desktop: true, mobile: true },
       }}
       withBorder={false}
-      // className="w-full flex flex-col"
+      className="w-full min-h-screen flex flex-col"
     >
       <Navbar />
-      <AppShell.Main className="w-full flex-1">{children}</AppShell.Main>
+      <AppShell.Main className="w-full h-full flex-1 flex flex-col">
+        {children}
+      </AppShell.Main>
     </AppShell>
   );
 }
