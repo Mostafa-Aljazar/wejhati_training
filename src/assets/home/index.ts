@@ -1,6 +1,7 @@
-import Cover_Bus from "./Cover_Bus.png"
-import adult from "./adult.svg"
-import child from "./child.svg"
-import target_arrow from "./target-arrow.svg"
+import Hero_Bus from './Hero_Bus.png';
+import Hero_Curve from './hero_section_curve.svg';
+import Adult from './adult.svg';
+import Child from './child.svg';
+import Target_Arrow from './target-arrow.svg';
 
-export { Cover_Bus, adult, child, target_arrow }
+export { Hero_Bus, Hero_Curve, Adult, Child, Target_Arrow };
