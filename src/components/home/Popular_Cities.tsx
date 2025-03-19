@@ -17,8 +17,13 @@ export default function Popular_Cities() {
   const shouldAutoplay = !(isXl && popular_cities.length === 4);
 
   return (
-    <Stack align="stretch" justify="flex-start" gap="30px">
-      <Title fz="h2" fw="normal" className="font-normal" ta="center">
+    <Stack justify="flex-start" gap="lg" w={'100%'} className="w-full p-4 ">
+      <Title
+        fz={{ base: 16, lg: 32 }}
+        fw="500"
+        ta={{ base: 'start', lg: 'center' }}
+        w={'100%'}
+      >
         Popular cities
       </Title>
 
@@ -29,7 +34,7 @@ export default function Popular_Cities() {
           maxWidth: '100%',
           minWidth: 250,
         }}
-        className="pl-10  md:px-20  xl:px-10"
+        className=" md:px-20  xl:px-10"
       >
         <Carousel
           type="media"
