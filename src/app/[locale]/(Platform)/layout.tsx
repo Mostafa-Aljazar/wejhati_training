@@ -2,6 +2,7 @@
 import { AppShell } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
 import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
 
 export default function Platform_Layout({
   children,
@@ -25,6 +26,7 @@ export default function Platform_Layout({
       <AppShell.Main className="w-full h-full flex-1 flex flex-col">
         {children}
       </AppShell.Main>
+      <Footer />
     </AppShell>
   );
 }

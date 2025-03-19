@@ -11,7 +11,6 @@ export default function HeroSection() {
         <Popular_Cities />
         <Before_Traveling />
       </Flex>
-      <div> hi from home</div>
     </>
   );
 }
