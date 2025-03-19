@@ -22,7 +22,7 @@ export default function Platform_Layout({
       className="w-full min-h-screen flex flex-col"
     >
       <Navbar />
-      <AppShell.Main className="w-full h-full flex-1 flex flex-col bg-red-600">
+      <AppShell.Main className="w-full h-full flex-1 flex flex-col">
         {children}
       </AppShell.Main>
     </AppShell>

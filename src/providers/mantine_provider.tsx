@@ -1,9 +1,11 @@
-"use client"
+'use client';
 
-import "@mantine/core/styles.css"
-import "@mantine/dates/styles.css"
-import { ReactNode } from "react"
-import { DirectionProvider, MantineProvider } from "@mantine/core"
+import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
+import '@mantine/carousel/styles.css';
+
+import { ReactNode } from 'react';
+import { DirectionProvider, MantineProvider } from '@mantine/core';
 import {
   Badge,
   Button,
@@ -22,69 +24,69 @@ import {
   TableThead,
   TagsInput,
   TextInput,
-} from "@mantine/core"
-import { Calendar, DatesProvider } from "@mantine/dates"
-import { Triangle } from "lucide-react"
-import { IconTriangleInvertedFilled } from "@tabler/icons-react"
+} from '@mantine/core';
+import { Calendar, DatesProvider } from '@mantine/dates';
+import { Triangle } from 'lucide-react';
+import { IconTriangleInvertedFilled } from '@tabler/icons-react';
 
 const primary = [
-  "#fff7e1",
-  "#ffedcd",
-  "#fdd99d",
-  "#fbc469",
-  "#f9b33d",
-  "#f8a821",
-  "#f8a210",
-  "#dd8d02",
-  "#c57d00",
-  "#ab6b00",
-] as const
+  '#fff7e1',
+  '#ffedcd',
+  '#fdd99d',
+  '#fbc469',
+  '#f9b33d',
+  '#f8a821',
+  '#f8a210',
+  '#dd8d02',
+  '#c57d00',
+  '#ab6b00',
+] as const;
 const secondary = [
-  "#f3f7ef",
-  "#e7ebe4",
-  "#cdd4c8",
-  "#b2bda9",
-  "#9ba98f",
-  "#8c9c7e",
-  "#849675",
-  "#718262",
-  "#637456",
-  "#536446",
-] as const
+  '#f3f7ef',
+  '#e7ebe4',
+  '#cdd4c8',
+  '#b2bda9',
+  '#9ba98f',
+  '#8c9c7e',
+  '#849675',
+  '#718262',
+  '#637456',
+  '#536446',
+] as const;
 const gray = [
-  "#f5f5f5",
-  "#e7e7e7",
-  "#cdcdcd",
-  "#b2b2b2",
-  "#e7e7e7",
-  "#8b8b8b",
-  "#848484",
-  "#717171",
-  "#656565",
-  "#575757",
-] as const
+  '#f5f5f5',
+  '#e7e7e7',
+  '#cdcdcd',
+  '#b2b2b2',
+  '#e7e7e7',
+  '#8b8b8b',
+  '#848484',
+  '#717171',
+  '#656565',
+  '#575757',
+] as const;
 
 const text = [
-  "#faf4ec",
-  "#eae7e3",
-  "#d0cecb",
-  "#b5b3af",
-  "#9e9c97",
-  "#908d88",
-  "#8a867f",
-  "#77736b",
-  "#6b665d",
-  "#5e574b",
-] as const
+  '#faf4ec',
+  '#eae7e3',
+  '#d0cecb',
+  '#b5b3af',
+  '#9e9c97',
+  '#908d88',
+  '#8a867f',
+  '#77736b',
+  '#6b665d',
+  '#5e574b',
+] as const;
 
 export const theme = createTheme({
-  black: "#2B261E",
+  black: '#2B261E',
   breakpoints: {
-    xs: "450px",
-    sm: "640px",
-    md: "768px",
-    lg: "1024px",
-    xl: "1280px",
+    xs: '450px',
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
   },
 
   colors: {
@@ -95,66 +97,66 @@ export const theme = createTheme({
   },
 
   // fontFamilyMonospace: "Monaco, Courier, monospace",
-  primaryColor: "primary",
+  primaryColor: 'primary',
   radius: {
-    sm: "0.35rem",
-    md: "0.55rem",
-    lg: "0.8rem",
-    xl: "1rem",
+    sm: '0.35rem',
+    md: '0.55rem',
+    lg: '0.8rem',
+    xl: '1rem',
   },
 
   components: {
     Divider: Divider.extend({
       defaultProps: {
-        color: "#DFDEDC",
+        color: '#DFDEDC',
       },
     }),
     Table: Table.extend({
       defaultProps: {
-        color: "primary",
+        color: 'primary',
         highlightOnHover: true,
-        verticalSpacing: "md",
-        borderColor: "#EAECF0",
+        verticalSpacing: 'md',
+        borderColor: '#EAECF0',
       },
     }),
     TableThead: TableThead.extend({
       defaultProps: {
-        bg: "#FFF9F0",
+        bg: '#FFF9F0',
       },
     }),
     TableTh: TableTh.extend({
       defaultProps: {
         fw: 600,
-        ta: "center",
+        ta: 'center',
       },
     }),
     TableTd: TableTd.extend({
       defaultProps: {
-        c: "#747474",
-        ta: "center",
+        c: '#747474',
+        ta: 'center',
       },
     }),
     Badge: Badge.extend({
       defaultProps: {
-        size: "lg",
-        radius: "xl",
+        size: 'lg',
+        radius: 'xl',
         fw: 600,
-        variant: "light",
+        variant: 'light',
         style: {
-          textTransform: "capitalize",
+          textTransform: 'capitalize',
         },
       },
     }),
     Menu: Menu.extend({
       defaultProps: {
-        shadow: "lg",
+        shadow: 'lg',
       },
     }),
     Input: Input.extend({
       defaultProps: {
-        size: "md",
+        size: 'md',
         fw: 500,
-        c: "primary",
+        c: 'primary',
         classNames: {
           input: '[type="tel"]:!text-left placeholder:text-sm ',
         },
@@ -163,15 +165,15 @@ export const theme = createTheme({
 
     Select: Select.extend({
       defaultProps: {
-        size: "md",
+        size: 'md',
         fw: 500,
         rightSection: <Triangle size={12} />,
         classNames: {
-          input: " placeholder:text-sm",
+          input: ' placeholder:text-sm',
         },
         labelProps: {
           style: {
-            fontSize: "14px",
+            fontSize: '14px',
           },
         },
       },
@@ -179,42 +181,42 @@ export const theme = createTheme({
 
     TextInput: TextInput.extend({
       defaultProps: {
-        size: "md",
+        size: 'md',
         classNames: {
-          input: " placeholder:text-sm",
+          input: ' placeholder:text-sm',
         },
 
         labelProps: {
           style: {
-            fontSize: "14px",
+            fontSize: '14px',
           },
         },
       },
     }),
     TagsInput: TagsInput.extend({
       defaultProps: {
-        size: "md",
+        size: 'md',
         classNames: {
-          inputField: " placeholder:text-sm",
+          inputField: ' placeholder:text-sm',
         },
 
         labelProps: {
           style: {
-            fontSize: "14px",
+            fontSize: '14px',
           },
         },
       },
     }),
     NumberInput: NumberInput.extend({
       defaultProps: {
-        size: "md",
+        size: 'md',
         classNames: {
-          input: " placeholder:text-sm",
+          input: ' placeholder:text-sm',
         },
 
         labelProps: {
           style: {
-            fontSize: "14px",
+            fontSize: '14px',
           },
         },
       },
@@ -223,7 +225,7 @@ export const theme = createTheme({
     Button: Button.extend({
       defaultProps: {
         fw: 500,
-        size: "md",
+        size: 'md',
       },
     }),
     // Calendar: Calendar.extend({
@@ -257,22 +259,22 @@ export const theme = createTheme({
     Radio: Radio.extend({
       defaultProps: {
         fw: 600,
-        c: "#817C74",
+        c: '#817C74',
       },
     }),
   },
 
-  defaultRadius: "md",
+  defaultRadius: 'md',
   fontSizes: {
     xs: rem(11),
     sm: rem(14),
     md: rem(16),
     lg: rem(18),
     xl: rem(20),
-    "2xl": rem(28),
+    '2xl': rem(28),
   },
   headings: {
-    fontWeight: "600",
+    fontWeight: '600',
     sizes: {
       h1: {
         fontSize: rem(36),
@@ -282,19 +284,21 @@ export const theme = createTheme({
       },
     },
   },
-})
+});
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 const MantineProviderWrapper = ({ children }: Props) => {
   return (
     <MantineProvider theme={theme}>
       <DirectionProvider detectDirection>
-        <DatesProvider settings={{ firstDayOfWeek: 0, weekendDays: [0] }}>{children}</DatesProvider>
+        <DatesProvider settings={{ firstDayOfWeek: 0, weekendDays: [0] }}>
+          {children}
+        </DatesProvider>
       </DirectionProvider>
     </MantineProvider>
-  )
-}
+  );
+};
 
-export default MantineProviderWrapper
+export default MantineProviderWrapper;
