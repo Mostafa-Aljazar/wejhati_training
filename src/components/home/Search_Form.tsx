@@ -15,11 +15,7 @@ import React, { useState } from 'react';
 import { cn } from '@/utility/cn';
 import One_Way_Form from './One_Way_Form';
 import Round_Way_Form from './Round_Way_Form';
-
-export const TabTypes = {
-  One_Way: 'One way',
-  Round_Trip: 'Round trip',
-};
+import { TabTypes } from '@/contents/home';
 
 export default function Search_Form() {
   const [activeTab, setActiveTab] = useState<string>(TabTypes.One_Way);

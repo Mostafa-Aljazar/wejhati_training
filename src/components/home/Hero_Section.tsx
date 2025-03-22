@@ -17,7 +17,7 @@ export default function Hero_Section() {
         />
 
         <Overlay color="black" backgroundOpacity={0.5} zIndex={10} />
-        <Box pos="absolute" bottom={0} w="100%" style={{ zIndex: 20 }}>
+        <Box pos="absolute" bottom={-2} w="100%" style={{ zIndex: 20 }}>
           <Image alt="Overlay" src={Hero_Curve} className="w-full" />
         </Box>
       </Box>

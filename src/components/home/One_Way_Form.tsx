@@ -1,10 +1,5 @@
 'use client';
-import {
-  Autocomplete,
-  AutocompleteProps,
-  Button,
-  Fieldset,
-} from '@mantine/core';
+import { Autocomplete, AutocompleteProps, Button } from '@mantine/core';
 import { ArrowRightLeft, Calendar, MapPin, Search } from 'lucide-react';
 import Image from 'next/image';
 import { DateInput } from '@mantine/dates';

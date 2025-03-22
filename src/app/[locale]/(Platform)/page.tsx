@@ -9,7 +9,6 @@ export default function HeroSection() {
   return (
     <>
       <Hero_Section />
-      {/* <Contact_Us /> */}
       <Flex gap="md" justify="center" align="center" direction="column">
         <Popular_Cities />
         <Before_Traveling />
