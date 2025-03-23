@@ -1,6 +1,6 @@
-import About_Us_Cover from "./About_Us_Cover.png"
-import Vehicle from "./Vehicle.png"
-import Target_Arrow from "./Target_Arrow.svg"
-// import trafficVehicle from "./trafficVehicle.svg";
+import About_Cover from './About_Cover.png';
+import Vehicle_en from './Vehicle_en.png';
+import Vehicle_ar from './Vehicle_ar.png';
+import Target_Arrow from './Target_Arrow.svg';
 
-export { About_Us_Cover, Vehicle, Target_Arrow }
+export { About_Cover, Vehicle_en, Vehicle_ar, Target_Arrow };

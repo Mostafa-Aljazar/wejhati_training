@@ -211,6 +211,16 @@
         "Cancellation": "Cancellation",
         "Trips_Schedule": "Trips schedule"
       }
+    },
+    "about": {
+      "title": "About Us",
+      "hero_title": "Connecting Journeys, Inspiring Destinations",
+      "hero_text": "Discover who we are, our vision for the future, and the mission that drives us to make travel seamless, reliable, and memorable for everyone.",
+      "about-us_text": "Wejhati is a comprehensive digital platform designed to simplify international ground transportation in Saudi Arabia by connecting transport companies with travelers, providing a seamless and modern travel experience. The platform also offers smart solutions for ground booking offices, enabling them to efficiently manage bus fleets, organize trips, and handle reservations.",
+      "vision": "Vision",
+      "vision_text": "Our vision is to become the leading platform in advancing international ground transportation in Saudi Arabia, by providing innovative tech solutions that elevate the quality of transport services and enhance the traveler experience.",
+      "Mission": "Mission",
+      "Mission_text": " We strive to deliver a safe and seamless ground transportation experience by offering travelers comfortable journeys and various options. Our goal is to simplify booking processes and trip management while empowering transport companies to improve their services and expand their operations confidently and professionally."
     }
   },
   "footer": {
