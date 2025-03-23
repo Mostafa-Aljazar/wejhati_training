@@ -21,7 +21,7 @@ export default function Hero_Section() {
           <Image alt="Overlay" src={Hero_Curve} className="w-full" />
         </Box>
       </Box>
-      <div className="z-50 relative flex justify-center items-center mx-auto -mt-40 mb-20 md:mb-40 px-4 w-full">
+      <div className="z-50 relative flex justify-center items-center mx-auto -mt-64 lg:-mt-40 mb-10 lg:mb-20 px-4 w-full">
         <Search_Section />
       </div>
     </>
