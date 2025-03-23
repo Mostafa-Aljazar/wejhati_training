@@ -1,3 +1,79 @@
+'use client';
+import { ActionIcon, Box, Flex, Text, Title } from '@mantine/core';
+import React from 'react';
+import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { GET_CONDITIONS } from '@/contents/tickets/Tickets_Conditions';
+import { IconArrowLeft, IconCircleArrowLeft } from '@tabler/icons-react';
+
 export default function Tickets_Conditions() {
-  return <div>Tickets_Conditions</div>;
+  const t = useTranslations('platform.my-tickets.tickets-conditions');
+  const Conditions = GET_CONDITIONS(t);
+  const router = useRouter();
+
+  return (
+    <Flex
+      direction="column"
+      justify="center"
+      align="center"
+      bg={{ base: '#FEF3E1', lg: '#F9F8F6' }}
+      pt={{ base: 72, md: 112 }}
+      w="100%"
+      h="100%"
+    >
+      <Flex
+        justify="flex-start"
+        align="center"
+        gap={{ base: 12, md: 32, lg: 48, xl: 64 }}
+        px={{ base: 16, md: 32, lg: 48, xl: 56 }}
+        w="100%"
+        h={{ base: 80, md: 'auto' }}
+      >
+        <ActionIcon
+          variant="transparent"
+          size={40}
+          radius="xl"
+          bg="#F9F8F6"
+          onClick={() => router.back()}
+        >
+          <IconCircleArrowLeft
+            color="#817C74"
+            className="hidden lg:block rtl:rotate-180"
+          />
+          <IconArrowLeft
+            color="#817C74"
+            size={24}
+            className="lg:hidden block rtl:rotate-180"
+          />
+        </ActionIcon>
+        <Title order={2} c="#2B261E" fw={600} fz={{ base: 16, md: 20, lg: 24 }}>
+          {t('title')}
+        </Title>
+      </Flex>
+
+      <Box
+        style={{ backgroundColor: '#F9F8F6' }}
+        px={{ base: 16, md: 40, lg: 144, xl: 160 }}
+        py={{ base: 20, md: 48 }}
+        w="100%"
+      >
+        <Flex
+          direction="column"
+          justify="flex-start"
+          gap={{ base: 20, md: 28 }}
+        >
+          {Conditions.map((item, index) => (
+            <Flex direction="column" justify="flex-start" gap={8} key={index}>
+              <Text fw={600} c="#2B261E" fz={{ base: 16, md: 18 }}>
+                {index + 1}. {item.title}
+              </Text>
+              <Text c="#817C74" fz={{ base: 14, md: 16 }}>
+                {item.body}
+              </Text>
+            </Flex>
+          ))}
+        </Flex>
+      </Box>
+    </Flex>
+  );
 }

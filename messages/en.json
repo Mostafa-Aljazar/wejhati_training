@@ -221,6 +221,71 @@
       "vision_text": "Our vision is to become the leading platform in advancing international ground transportation in Saudi Arabia, by providing innovative tech solutions that elevate the quality of transport services and enhance the traveler experience.",
       "Mission": "Mission",
       "Mission_text": " We strive to deliver a safe and seamless ground transportation experience by offering travelers comfortable journeys and various options. Our goal is to simplify booking processes and trip management while empowering transport companies to improve their services and expand their operations confidently and professionally."
+    },
+    "my-tickets": {
+      "tickets-conditions": {
+        "title": "Tickets Conditions",
+        "Passport-Verification": {
+          "title": "Passport Verification",
+          "body": "Customers must present their original passport as proof when purchasing tickets and during travel to match their names and ages."
+        },
+        "Personal-Information-Accuracy": {
+          "title": "Personal Information Accuracy",
+          "body": "Travelers are responsible for ensuring the accuracy of all personal information on their tickets. The company will not bear any responsibility for such errors."
+        },
+        "Valid-Travel-Documents": {
+          "title": "Valid Travel Documents",
+          "body": "Customers must present a valid travel document when traveling."
+        },
+        "Traveling-with-Children": {
+          "title": "Traveling with Children",
+          "body": "Children aged between two and under thirteen must travel with at least one adult (aged 16 or older). Infants under two must also be accompanied by an adult (16 years or older), with one adult allowed for each infant."
+        },
+        "Seating-Arrangements": {
+          "title": "Seating Arrangements",
+          "body": "Travelers must sit in the seat or bus number assigned to them on their ticket."
+        },
+        "Non-Transferable-Tickets": {
+          "title": "Non-Transferable Tickets",
+          "body": "All tickets are non-transferable and may only be used by the individual named on the ticket."
+        },
+        "Health-Safety": {
+          "title": "Health Safety",
+          "body": "All passengers on board the buses must ensure they are free from any communicable diseases that could pose a risk to the safety of other passengers and staff."
+        },
+        "Use-of-Personal-Information": {
+          "title": "Use of Personal Information",
+          "body": "The company or any third party may use your personal information for statistical analysis, marketing purposes, customer studies, customer relations, and product and service development."
+        },
+        "Discount-Exclusions": {
+          "title": "Discount Exclusions",
+          "body": "Discounts do not apply to tickets subject to special offers and promotional prices."
+        },
+        "Price-Modifications": {
+          "title": "Price Modifications",
+          "body": "Discounts do not apply to tickets subject to special offers and promotional prices."
+        },
+        "Date-Reference": {
+          "title": "Date Reference",
+          "body": "Discounts do not apply to tickets subject to special offers and promotional prices."
+        },
+        "No-Smoking-Policy": {
+          "title": "No Smoking Policy",
+          "body": "Discounts do not apply to tickets subject to special offers and promotional prices."
+        },
+        "Child-Supervision": {
+          "title": "Child Supervision",
+          "body": "Parents must supervise their children at all times to ensure their safety."
+        },
+        "Prohibited-Items": {
+          "title": "Prohibited Items",
+          "body": "The transport of any type of explosives, weapons, drugs, flammable materials, compressed substances, corrosive materials, toxic substances, electronic shishas, and sharp tools is strictly prohibited on the bus."
+        },
+        "Acceptance-of-Terms": {
+          "title": "Acceptance of Terms",
+          "body": "By purchasing a ticket from the company, you acknowledge and agree to all the terms and conditions stated."
+        }
+      }
     }
   },
   "footer": {
