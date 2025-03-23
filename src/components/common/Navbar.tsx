@@ -42,7 +42,7 @@ export default function Navbar() {
     >
       <Group h="100%" className="w-full">
         <Group justify="space-between" style={{ flex: 1 }}>
-          <Link href={'/'} className="flex items-center justify-center">
+          <Link href={'/'} className="flex justify-center items-center">
             <Image src={wejhati} alt="wejhati" className="w-20" />
           </Link>
           <Group gap={32} visibleFrom="lg">

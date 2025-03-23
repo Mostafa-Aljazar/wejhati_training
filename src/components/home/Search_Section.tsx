@@ -13,11 +13,14 @@ import {
 import { Baby, ChevronDown, CircleUserRound, Minus, Plus } from 'lucide-react';
 import React, { useState } from 'react';
 import { cn } from '@/utility/cn';
-import One_Way_Form from './One_Way_Form';
-import Round_Way_Form from './Round_Way_Form';
+import { useTranslations } from 'next-intl';
 import { TabTypes } from '@/contents/home';
+import Trip_Form from './Trip_Form';
 
-export default function Search_Form() {
+export default function Search_Section() {
+  const tGen = useTranslations('general'); // For general translations
+  const tNav = useTranslations('nav-bar'); // For nav-bar translations
+
   const [activeTab, setActiveTab] = useState<string>(TabTypes.One_Way);
   const [adults, setAdults] = useState(0);
   const [children, setChildren] = useState(0);
@@ -38,7 +41,9 @@ export default function Search_Form() {
       }}
     >
       <Text size="14px" fw={500} c={activeTab === tab ? 'primary' : '#2B261E'}>
-        {tab}
+        {tab === TabTypes.One_Way
+          ? tGen('trip-types.oneWay')
+          : tGen('trip-types.Round')}
       </Text>
       <Box
         w={36}
@@ -55,7 +60,7 @@ export default function Search_Form() {
   return (
     <Fieldset
       legend={
-        <Group className="!gap-3 !lg:gap-10 pl-5">
+        <Group className="!gap-3 !lg:gap-10 px-5">
           <Button
             w={137}
             h={32}
@@ -65,7 +70,7 @@ export default function Search_Form() {
             radius="md"
             className="!p-0"
           >
-            Book tickets
+            {tNav('book-tickets')}
           </Button>
           <Button
             variant="light"
@@ -78,7 +83,7 @@ export default function Search_Form() {
             bg="#231D1DC2"
             className="!p-0"
           >
-            Booking Enquiry
+            {tNav('booking-enquirer')}
           </Button>
         </Group>
       }
@@ -111,7 +116,7 @@ export default function Search_Form() {
                   className="!m-0 !p-0 h-11 text-black"
                   c={'dark'}
                 >
-                  Passengers
+                  {tGen('passengers')}
                 </Button>
               </Popover.Target>
 
@@ -120,10 +125,10 @@ export default function Search_Form() {
                   <Group align="center" justify="space-between" w={'100%'}>
                     <Stack gap={0}>
                       <Text fw={400} fz={14} c={'#2B261E'}>
-                        Adult
+                        {tGen('adult')}
                       </Text>
                       <Text c={'#B9B5B1'} fz={10} fw={'400'}>
-                        Age 12+
+                        {tGen('age')} 12+
                       </Text>
                     </Stack>
                     <Group gap={10}>
@@ -161,10 +166,10 @@ export default function Search_Form() {
                   >
                     <Stack gap={0}>
                       <Text fw={400} fz={14} c={'#2B261E'}>
-                        Children
+                        {tGen('child')}
                       </Text>
                       <Text c={'#B9B5B1'} fz={10} fw={'400'}>
-                        Age 12-
+                        {tGen('age')} 12-
                       </Text>
                     </Stack>
                     <Group gap={10}>
@@ -222,10 +227,14 @@ export default function Search_Form() {
             </Text>
           </div>
           <Tabs.Panel value={TabTypes.One_Way} className="px-4 w-full">
-            <One_Way_Form Children={children} Adults={adults} />
+            <Trip_Form tripType="One_Way" Children={children} Adults={adults} />
           </Tabs.Panel>
           <Tabs.Panel value={TabTypes.Round_Trip} className="px-4 w-full">
-            <Round_Way_Form Children={children} Adults={adults} />
+            <Trip_Form
+              tripType="Round_Trip"
+              Children={children}
+              Adults={adults}
+            />
           </Tabs.Panel>
         </Tabs>
       </div>

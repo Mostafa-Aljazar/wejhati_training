@@ -1,13 +1,86 @@
 {
+  "general": {
+    "all": "الكل",
+    "trips": "الرحلات",
+    "edit": "تعديل",
+    "departures": "المغادرات",
+    "return-passenger": "العودة",
+    "provider": "المزود",
+    "wejhati": "وجْهتي",
+    "cancel": "إلغاء",
+    "fail-notification-title": "فشل!",
+    "success-notification-title": "نجاح!",
+    "export": "تصدير",
+    "seats": "مقاعد",
+    "active": "نشط",
+    "amount": "المبلغ",
+    "trip-cancel-popover": "هذه الرحلة تحتوي على حجوزات نشطة ولا يمكن إلغاؤها!",
+    "trip-types": {
+      "all": "الكل",
+      "oneWay": "ذهاب فقط",
+      "Round": "ذهاب وعودة"
+    },
+    "seats_available": "{value} مقاعد متاحة",
+    "copied": "تم النسخ",
+    "id": "المعرف",
+    "search": "بحث",
+    "date-range-input-placeholder": "اختر التواريخ",
+    "date-input-placeholder": "اختر التاريخ",
+    "date": "تاريخ الرحلة",
+    "time": "الوقت",
+    "filter": "تصفية",
+    "trip-type": "نوع الرحلة",
+    "departure": "المغادرة",
+    "adult": "بالغ",
+    "child": "طفل",
+    "arrival": "الوصول",
+    "model": "الطراز",
+    "bus-status": "حالة الحافلة",
+    "profile": "تفاصيل الملف الشخصي",
+    "bank": "تفاصيل البنك",
+    "logout": "تسجيل الخروج",
+    "save-changes": "حفظ التغييرات",
+    "payment": "الدفع",
+    "bill_summary": "ملخص الفاتورة",
+    "hourly": "ساعة",
+    "daily": "يوم",
+    "weekly": "أسبوع",
+    "monthly": "شهر",
+    "yearly": "سنة",
+    "select": "اختر",
+    "SAR-unit": "ريال سعودي",
+    "success": "نجاح",
+    "error": "خطأ",
+    "age": "العمر",
+    "passengers": "الركاب",
+    "passenger": "راكب",
+    "clear-filter": "مسح التصفية",
+    "Apply": "تطبيق",
+    "male": "ذكر",
+    "female": "أنثى",
+    "card": "بطاقة",
+    "cash": "نقدًا",
+    "brand": "العلامة التجارية",
+    "save": "حفظ",
+    "delete": "حذف",
+    "next": "التالي",
+    "departure_required": "المغادرة مطلوبة",
+    "arrival_required": "الوصول مطلوب",
+    "date_required": "التاريخ مطلوب",
+    "departure_date_required": "تاريخ المغادرة مطلوب",
+    "return_date_required": "تاريخ العودة مطلوب"
+  },
   "errors": {
     "required_error": "مطلوب*",
-    "Invalid_email": "معرف بريد إلكتروني غير صالح*",
-    "Incorrect_password": "كلمة سر غير صحيحة *",
-    "Invalid_email_format": "تنسيق بريد إلكتروني غير صالح *",
-    "Invalid_password_format": "استخدم 6 + أحرف",
-    "Passwords_do_not_match": "كلمات المرور لا تتطابق",
-    "Invalid_otp": "غير صالح OTP *",
-    "Time_out": "نفذ الوقت*"
+    "Invalid_email": "بريد إلكتروني غير صالح*",
+    "Incorrect_password": "كلمة مرور غير صحيحة*",
+    "Invalid_email_format": "تنسيق بريد إلكتروني غير صالح*",
+    "Invalid_password_format": "استخدم 6 أحرف أو أكثر",
+    "Passwords_do_not_match": "كلمات المرور غير متطابقة",
+    "Invalid_otp": "رمز OTP غير صالح*",
+    "Time_out": "انتهى الوقت*",
+    "Same_Station_Error": "محطة الوصول لا يمكن أن تكون نفس محطة المغادرة",
+    "Return_Date_After_Departure": "يجب أن يكون تاريخ العودة بعد تاريخ المغادرة"
   },
   "Auth": {
     "routes": {
@@ -21,95 +94,165 @@
     "left_section": {
       "source": "forget-password",
       "auth": {
-        "button": "اختر دورك للبدء",
-        "text": "استكشف الرحلات أو إدارة الخدمات"
-      },
-      "forget_password": {
-        "text": "لا تقلق! \nسنساعدك على إعادة ضبطه بسرعة وأمان.",
-        "button": "رحلة سعيدة!"
+        "text": "استكشف الرحلات أو أدر الخدمات",
+        "button": "اختر دورك للبدء"
       },
       "sign_in": {
-        "text": "رحلتك تبدأ هنا. \nإنشاء حساب لحجز تذاكر",
+        "text": "رحلتك تبدأ هنا. أنشئ حسابًا لحجز التذاكر",
+        "button": "رحلة سعيدة!"
+      },
+      "forget_password": {
+        "text": "لا تقلق! سنساعدك على إعادة تعيينها بسرعة وأمان.",
         "button": "رحلة سعيدة!"
       }
     },
     "auth": {
       "traveler": {
-        "title": "المسافر",
-        "text": "احجز تذاكر وعرض الجداول وإدارة رحلاتك بسهولة.",
+        "title": "مسافر",
+        "text": "احجز التذاكر، شاهد الجداول، وأدر رحلاتك بسهولة.",
         "link": "/auth/login?type=user"
       },
       "Service_Provider": {
         "title": "مزود الخدمة",
-        "text": "الوصول إلى لوحة القيادة الخاصة بك لإدارة الرحلات والحجوزات ودعم العملاء.",
+        "text": "ادخل إلى لوحة التحكم لإدارة الرحلات والحجوزات ودعم العملاء.",
         "link": "/auth/login?type=provider"
-      }
-    },
-    "login": {
-      "title": "تسجيل الدخول",
-      "inputs": {
-        "email": {
-          "text": "معرف البريد الإلكتروني",
-          "placeholder": "أدخل بريدك الإلكتروني"
-        },
-        "password": {
-          "placeholder": "أدخل كلمة المرور الخاصة بك",
-          "text": "كلمة المرور"
-        }
       },
-      "forget_password": "هل نسيت كلمة السر؟",
-      "or": "أو",
-      "dont_have_account": "ليس لديك حساب؟",
-      "sign_up": "اشتراك",
-      "button": "يتابع"
+      "select": "اختر"
     },
     "sign_up": {
       "title": "إنشاء حساب جديد",
       "inputs": {
         "email": {
-          "text": "معرف البريد الإلكتروني",
+          "text": "البريد الإلكتروني",
           "placeholder": "أدخل بريدك الإلكتروني"
         }
       },
-      "button": "تحقق من OTP",
+      "button": "تأكيد OTP",
       "or": "أو",
-      "have_account": "هل لديك بالفعل حساب؟",
+      "have_account": "لديك حساب بالفعل؟",
       "login": "تسجيل الدخول"
     },
     "otp": {
-      "text": "الرجاء إدخال OTP المكون من 4 أرقام المرسلة إلى رقم هاتفك المحمول",
+      "title": "أدخل رمز OTP",
+      "text": "يرجى إدخال رمز OTP المكون من 4 أرقام المرسل إلى رقم هاتفك المحمول",
       "resend": "إعادة إرسال OTP",
-      "button": "تأكيد",
-      "title": "أدخل OTP"
+      "button": "تأكيد"
     },
-    "forget_password": {
-      "title": "هل نسيت كلمة السر!",
-      "text": "أدخل بريدك الإلكتروني ، وسنرسل لك OTP لإعادة تعيين كلمة مرور حسابك بشكل آمن.",
+    "login": {
+      "title": "تسجيل الدخول",
       "inputs": {
         "email": {
-          "placeholder": "أدخل بريدك الإلكتروني",
-          "text": "معرف البريد الإلكتروني"
+          "text": "البريد الإلكتروني",
+          "placeholder": "أدخل بريدك الإلكتروني"
+        },
+        "password": {
+          "text": "كلمة المرور",
+          "placeholder": "أدخل كلمة المرور"
         }
       },
-      "login": "تسجيل الدخول",
-      "have_account": "هل لديك بالفعل حساب؟",
-      "button": "تحقق من OTP",
-      "or": "أو"
+      "forget_password": "نسيت كلمة المرور؟",
+      "button": "متابعة",
+      "or": "أو",
+      "dont_have_account": "ليس لديك حساب؟",
+      "sign_up": "إنشاء حساب"
+    },
+    "forget_password": {
+      "title": "نسيت كلمة المرور!",
+      "text": "أدخل بريدك الإلكتروني، وسنرسل لك رمز OTP لإعادة تعيين كلمة مرور حسابك بأمان.",
+      "inputs": {
+        "email": {
+          "text": "البريد الإلكتروني",
+          "placeholder": "أدخل بريدك الإلكتروني"
+        }
+      },
+      "button": "تأكيد OTP",
+      "or": "أو",
+      "have_account": "لديك حساب بالفعل؟",
+      "login": "تسجيل الدخول"
     },
     "create_new_password": {
+      "title": "إنشاء كلمة مرور جديدة",
+      "text": "عيّن كلمة مرور قوية وآمنة لحماية حسابك.",
       "inputs": {
         "new_password": {
           "text": "كلمة المرور الجديدة",
-          "placeholder": "أدخل كلمة المرور الخاصة بك"
+          "placeholder": "أدخل كلمة المرور"
         },
         "confirm_password": {
           "text": "تأكيد كلمة المرور",
           "placeholder": "أدخل كلمة المرور مرة أخرى"
         }
       },
-      "title": "إنشاء كلمة مرور جديدة",
-      "text": "اضبط كلمة مرور قوية وآمنة لحماية حسابك.",
-      "button": "يتأكد"
+      "button": "تأكيد"
     }
+  },
+  "platform": {
+    "home": {
+      "Popular_Cities": {
+        "title": "المدن الشعبية",
+        "cities": {
+          "Syria": {
+            "country": "سوريا",
+            "city": "دمشق"
+          },
+          "Saudi_Arabia": {
+            "country": "المملكة العربية السعودية",
+            "city": "الرياض"
+          },
+          "Jordan": {
+            "country": "الأردن",
+            "city": "عمان"
+          },
+          "Yemen": {
+            "country": "اليمن",
+            "city": "صنعاء"
+          }
+        }
+      },
+      "Before_Traveling": {
+        "title": "قبل السفر",
+        "Ticket_Conditions": "شروط التذاكر",
+        "Booking_Enquiry": "استفسار الحجز",
+        "Cancellation": "الإلغاء",
+        "Trips_Schedule": "جدول الرحلات"
+      }
+    }
+  },
+  "footer": {
+    "home": "الرئيسية",
+    "about-us": "من نحن",
+    "contact-us": "اتصل بنا",
+    "my-tickets": "تذاكري",
+    "trips-schedule": "جدول الرحلات",
+    "booking-enquirer": "استفسار الحجز",
+    "book-tickets": "حجز التذاكر",
+    "cancellation": "الإلغاء",
+    "resources": "المصادر",
+    "tickets": "التذاكر",
+    "rights": "© {value} وجْهتي. جميع الحقوق محفوظة.",
+    "ticket-conditions": "شروط التذاكر",
+    "transport": "وزارة النقل والخدمات اللوجستية",
+    "transport-authority": "الهيئة العامة للنقل",
+    "terms-and-conditions": "الشروط والأحكام،",
+    "glow": "تم التطوير بواسطة Glow",
+    "privacy-policy": "سياسة الخصوصية",
+    "email": "البريد الإلكتروني:",
+    "phone": "الهاتف:",
+    "social-media": "وسائل التواصل الاجتماعي"
+  },
+  "nav-bar": {
+    "sign-up": "إنشاء حساب",
+    "login": "تسجيل الدخول",
+    "home": "الرئيسية",
+    "about-us": "من نحن",
+    "contact-us": "اتصل بنا",
+    "my-tickets": "تذاكري",
+    "trips-schedule": "جدول الرحلات",
+    "booking-enquirer": "استفسار الحجز",
+    "book-tickets": "حجز التذاكر",
+    "cancellation": "الإلغاء",
+    "ticket-conditions": "شروط التذاكر",
+    "edit": "تعديل",
+    "logout": "تسجيل الخروج"
   }
 }

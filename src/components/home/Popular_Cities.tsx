@@ -3,12 +3,17 @@ import '@mantine/carousel/styles.css';
 import { Stack, Title } from '@mantine/core';
 import React, { useRef } from 'react';
 import City_Card from './City_Card';
-import { popular_cities } from '@/contents/home';
+// import { popular_cities } from '@/contents/home';
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import Autoplay from 'embla-carousel-autoplay';
+import { getPopularCities } from '@/contents/home';
+import { useTranslations } from 'next-intl';
 
 export default function Popular_Cities() {
+  const t = useTranslations();
+  const popular_cities = getPopularCities(t);
+
   const isXl = useMediaQuery('(min-width: 1280px)', true, {
     getInitialValueInEffect: false,
   });
@@ -17,14 +22,14 @@ export default function Popular_Cities() {
   const shouldAutoplay = !(isXl && popular_cities.length === 4);
 
   return (
-    <Stack justify="flex-start" gap="lg" w={'100%'} className="w-full p-4 ">
+    <Stack justify="flex-start" gap="lg" w={'100%'} className="px-4 w-full">
       <Title
         fz={{ base: 16, lg: 32 }}
         fw="500"
         ta={{ base: 'start', lg: 'center' }}
         w={'100%'}
       >
-        Popular cities
+        {t('platform.home.Popular_Cities.title')}
       </Title>
 
       <div
@@ -34,7 +39,7 @@ export default function Popular_Cities() {
           maxWidth: '100%',
           minWidth: 250,
         }}
-        className=" md:px-20  xl:px-10"
+        className="md:px-20 xl:px-10"
       >
         <Carousel
           type="media"

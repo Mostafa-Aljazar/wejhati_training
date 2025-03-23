@@ -1,4 +1,70 @@
 {
+  "general": {
+    "all": "All",
+    "trips": "Trips",
+    "edit": "Edit",
+    "departures": "departures",
+    "return-passenger": "Return",
+    "provider": "Provider",
+    "wejhati": "Wejhati",
+    "cancel": "Cancel",
+    "fail-notification-title": "Failed!",
+    "success-notification-title": "Success!",
+    "export": "Export",
+    "seats": "Seats",
+    "active": "Active",
+    "amount": "Amount",
+    "trip-cancel-popover": "This trip has Active bookings and cannot be cancelled!",
+    "trip-types": {
+      "all": "All",
+      "oneWay": "One Way",
+      "Round": "Round"
+    },
+    "seats_available": "{value} seats available",
+    "copied": "Copied",
+    "id": "ID",
+    "search": "Search",
+    "date-range-input-placeholder": "Choose Dates",
+    "date-input-placeholder": "Choose Date",
+    "date": "Date",
+    "time": "Time",
+    "filter": "Filter",
+    "trip-type": "Trip Type",
+    "departure": "Departure",
+    "adult": "Adult",
+    "child": "Child",
+    "arrival": "Arrival",
+    "model": "model",
+    "bus-status": "Bus Status",
+    "profile": "Profile Details",
+    "bank": "Bank Details",
+    "logout": "Logout",
+    "save-changes": "Save Changes",
+    "payment": "Payment",
+    "bill_summary": "Bill summary",
+    "hourly": "hour",
+    "daily": "Day",
+    "weekly": "Week",
+    "monthly": "Month",
+    "yearly": "year",
+    "select": "Select",
+    "SAR-unit": "SAR",
+    "success": "Success",
+    "error": "Error",
+    "age": "Age",
+    "passengers": "Passengers",
+    "passenger": "Passenger",
+    "clear-filter": "Clear Filter",
+    "Apply": "Apply",
+    "male": "Male",
+    "female": "Female",
+    "card": "Card",
+    "cash": "Cash",
+    "brand": "Brand",
+    "save": "Save",
+    "delete": "Delete",
+    "next": "Next"
+  },
   "errors": {
     "required_error": "required*",
     "Invalid_email": "Invalid email ID*",
@@ -7,7 +73,9 @@
     "Invalid_password_format": "Use 6+ characters",
     "Passwords_do_not_match": "Passwords do not match",
     "Invalid_otp": "Invalid OTP*",
-    "Time_out": "Time out*"
+    "Time_out": "Time out*",
+    "Same_Station_Error": "Arrival station cannot be the same as Departure station",
+    "Return_Date_After_Departure": "Return date must be after departure date"
   },
   "Auth": {
     "routes": {
@@ -112,5 +180,74 @@
       },
       "button": "Confirm"
     }
+  },
+  "platform": {
+    "home": {
+      "Popular_Cities": {
+        "title": "Popular Cities",
+        "cities": {
+          "Syria": {
+            "country": "Syria",
+            "city": "Damascus "
+          },
+          "Saudi_Arabia": {
+            "country": "Saudi Arabia",
+            "city": "Riyadh"
+          },
+          "Jordan": {
+            "country": "Jordan",
+            "city": "Amman"
+          },
+          "Yemen": {
+            "country": "Yemen",
+            "city": "Sanaa"
+          }
+        }
+      },
+      "Before_Traveling": {
+        "title": "Before traveling",
+        "Ticket_Conditions": "Ticket conditions",
+        "Booking_Enquiry": "Booking enquiry",
+        "Cancellation": "Cancellation",
+        "Trips_Schedule": "Trips schedule"
+      }
+    }
+  },
+  "footer": {
+    "home": "Home",
+    "about-us": "About Us",
+    "contact-us": "Contact Us",
+    "my-tickets": "My tickets",
+    "trips-schedule": "Trips Schedule",
+    "booking-enquirer": "Booking Enquirer",
+    "book-tickets": "Book Tickets",
+    "cancellation": "Cancellation",
+    "resources": "Resources",
+    "tickets": "Tickets",
+    "rights": "© {value} Wejhati. All rights reserved.",
+    "ticket-conditions": "Tickets conditions",
+    "transport": "Ministry of Transport and Logistics",
+    "transport-authority": "General Transport Authority.",
+    "terms-and-conditions": "Terms and conditions,",
+    "glow": "Developed by Glow",
+    "privacy-policy": "Privacy policy",
+    "email": "Email:",
+    "phone": "Phone:",
+    "social-media": "Social media"
+  },
+  "nav-bar": {
+    "sign-up": "Sign up",
+    "login": "Login",
+    "home": "Home",
+    "about-us": "About Us",
+    "contact-us": "Contact Us",
+    "my-tickets": "My tickets",
+    "trips-schedule": "Trips Schedule",
+    "booking-enquirer": "Booking Enquirer",
+    "book-tickets": "Book Tickets",
+    "cancellation": "Cancellation",
+    "ticket-conditions": "Tickets conditions",
+    "edit": "Edit",
+    "logout": "Logout"
   }
 }

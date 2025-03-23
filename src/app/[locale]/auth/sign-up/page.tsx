@@ -47,25 +47,25 @@ export default function Sign_Up() {
   return (
     <>
       {/* Desktop & Mobile */}
-      <div className="gap-16 flex  w-full h-full flex-col items-center rounded-xl bg-white lg:pt-16 pb-5 lg:w-[550px]">
-        <p className="text-2xl font-medium md:text-4xl text-center">
+      <div className="flex flex-col items-center gap-16 bg-white lg:pt-16 pb-5 rounded-xl w-full lg:w-[550px] h-full">
+        <p className="font-medium text-2xl md:text-4xl text-center">
           {t('title')} 👋
         </p>
 
-        <div className="gap-5 flex flex-col items-center justify-center">
+        <div className="flex flex-col justify-center items-center gap-5">
           <form
-            className="gap-10 flex flex-col items-center"
+            className="flex flex-col items-center gap-10"
             onSubmit={handleSubmit}
           >
             {/* Email Id */}
             <TextInput
               label={
-                <p className="text-xs font-medium text-[#817C74]">
+                <p className="font-medium text-[#817C74] text-xs">
                   {t('inputs.email.text')}
                 </p>
               }
               placeholder={t('inputs.email.placeholder')}
-              className="border-w-1 w-[343px] border-[#DFDEDC] outline-none focus:border-none md:w-[400px]"
+              className="border-[#DFDEDC] border-w-1 focus:border-none outline-none w-[343px] md:w-[400px]"
               key={form.key('email')}
               {...form.getInputProps('email')}
               classNames={{
@@ -89,13 +89,13 @@ export default function Sign_Up() {
               </Text>
             ) : null}
           </form>
-          <div className="mt-7 flex w-full flex-row items-center">
-            <span className="h-[1px] w-full flex-1 bg-[#DFDEDC]"></span>
+          <div className="flex flex-row items-center mt-7 w-full">
+            <span className="flex-1 bg-[#DFDEDC] w-full h-[1px]"></span>
             <span className="mx-2 font-medium text-[#817C74]">{t('or')}</span>
-            <span className="h-[1px] w-full flex-1 bg-[#DFDEDC]"></span>
+            <span className="flex-1 bg-[#DFDEDC] w-full h-[1px]"></span>
           </div>
 
-          <div className="mt-5 text-sm font-medium text-[#817C74]">
+          <div className="mt-5 font-medium text-[#817C74] text-sm">
             {t('have_account')}{' '}
             <Link href={AUTH_ROUTES.LOGIN} className="text-[#F19A07]">
               {t('login')}

@@ -14,14 +14,14 @@ type Props = {
 export default function Before_Traveling_Card(info: Props) {
   return (
     <Link href={info.link}>
-      <Box className="relative h-[140px] w-[166px] mx-auto overflow-hidden rounded-lg shadow-lg lg:h-40 lg:w-56 xl:h-48 xl:w-[284px] ">
+      <Box className="relative shadow-lg mx-auto rounded-lg w-[166px] lg:w-56 xl:w-[284px] h-[140px] lg:h-40 xl:h-48 overflow-hidden">
         <Image
           src={info.image}
           alt={info.text}
-          className="h-full w-full object-cover"
+          className="w-full h-full object-cover"
         />
 
-        <Box className="absolute bottom-0 left-0 w-full bg-black/50 bg-opacity-60 p-2">
+        <Box className="bottom-0 left-0 absolute bg-black/50 bg-opacity-60 p-2 w-full">
           <Text
             size="sm"
             fz={{ base: 14, lg: 16 }}

@@ -2,7 +2,7 @@ import { Box, Overlay } from '@mantine/core';
 import Image from 'next/image';
 import React from 'react';
 import { Hero_Bus, Hero_Curve } from '@/assets/home';
-import Search_Form from './Search_Form';
+import Search_Section from './Search_Section';
 
 export default function Hero_Section() {
   return (
@@ -22,7 +22,7 @@ export default function Hero_Section() {
         </Box>
       </Box>
       <div className="z-50 relative flex justify-center items-center mx-auto -mt-40 mb-20 md:mb-40 px-4 w-full">
-        <Search_Form />
+        <Search_Section />
       </div>
     </>
   );
