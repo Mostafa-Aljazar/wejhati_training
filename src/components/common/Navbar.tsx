@@ -9,6 +9,7 @@ import Languages_Switcher from './Languages_Switcher';
 import Nav_Drawer from './Nav_Drawer';
 import { useTranslations } from 'next-intl';
 import { GET_NAV_ITEMS } from '@/contents/common/navbar';
+import { PLATFORM_ROUTES } from '@/contents/routes/routes';
 
 export default function Navbar() {
   const t = useTranslations();
@@ -18,7 +19,7 @@ export default function Navbar() {
 
   const MenuItems = useMemo(() => {
     return NAV_ITEMS.map((item) => {
-      if (item.link === 'my-tickets') {
+      if (item.link === PLATFORM_ROUTES.my_tickets) {
         return <Nav_Tickets key={item.link} />;
       }
       const isActive = item.link === pathname;

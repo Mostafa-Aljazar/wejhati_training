@@ -1,6 +1,7 @@
 'use client';
 import { squares_menu } from '@/assets/common';
 import { GET_MY_TICKETS, GET_NAV_ITEMS } from '@/contents/common/navbar';
+import { PLATFORM_ROUTES } from '@/contents/routes/routes';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/utility/cn';
 import { Box, Collapse, Drawer, Stack } from '@mantine/core';
@@ -53,7 +54,7 @@ export default function Nav_Drawer() {
       >
         <Stack pt={20}>
           {NAV_ITEMS.map((item, index) => {
-            if (item.text === 'My Tickets') {
+            if (item.link === PLATFORM_ROUTES.my_tickets) {
               return (
                 <Box key={index} className="w-full">
                   <div
