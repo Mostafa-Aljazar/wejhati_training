@@ -7,9 +7,13 @@ import React, { useMemo } from 'react';
 import Nav_Tickets from './Nav_Tickets';
 import Languages_Switcher from './Languages_Switcher';
 import Nav_Drawer from './Nav_Drawer';
-import { NAV_ITEMS } from '@/contents/common/navbar';
+import { useTranslations } from 'next-intl';
+import { GET_NAV_ITEMS } from '@/contents/common/navbar';
 
 export default function Navbar() {
+  const t = useTranslations();
+  const NAV_ITEMS = GET_NAV_ITEMS(t);
+
   const pathname = usePathname();
 
   const MenuItems = useMemo(() => {
@@ -52,11 +56,11 @@ export default function Navbar() {
           <Group>
             <Languages_Switcher />
             <Group visibleFrom="lg">
-              <Button variant="outline" w={100} h={32}>
-                Log up
+              <Button variant="outline" w={100} h={32} p={0}>
+                {t('nav-bar.sign-up')}
               </Button>
-              <Button variant="outline" w={100} h={32}>
-                Login
+              <Button variant="outline" w={100} h={32} p={0}>
+                {t('nav-bar.login')}
               </Button>
             </Group>
             <Group hiddenFrom="lg">

@@ -1,6 +1,11 @@
+import { useTranslations } from 'next-intl';
 import { Footer_Cover, Footer_Curve, logo } from '@/assets/common';
-import { CONTACT_US, RESOURCES, SOCIALS } from '@/contents/common/footer';
-import { MY_TICKETS } from '@/contents/common/navbar';
+import {
+  GET_CONTACT_US,
+  GET_RESOURCES,
+  GET_SOCIALS,
+} from '@/contents/common/footer';
+import { GET_MY_TICKETS } from '@/contents/common/navbar';
 import { Link } from '@/i18n/navigation';
 import {
   Divider,
@@ -14,7 +19,14 @@ import {
 } from '@mantine/core';
 import Image from 'next/image';
 
-function Footer() {
+// Footer Component
+export default function Footer() {
+  const t = useTranslations();
+  const CONTACT_US = GET_CONTACT_US(t);
+  const RESOURCES = GET_RESOURCES(t);
+  const SOCIALS = GET_SOCIALS(t);
+  const MY_TICKETS = GET_MY_TICKETS(t);
+
   return (
     <Box
       component="footer"
@@ -38,7 +50,7 @@ function Footer() {
       >
         <Image
           src={Footer_Cover}
-          alt="Footer Cover Background"
+          alt={t('footer.image-cover')}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
@@ -57,7 +69,7 @@ function Footer() {
       </Box>
       <Image
         src={Footer_Curve}
-        alt="Footer Curve"
+        alt={t('footer.image-curve')}
         priority
         style={{ position: 'absolute', top: 0, left: 0, right: 0 }}
         className="hidden lg:block"
@@ -70,7 +82,7 @@ function Footer() {
           <Grid.Col span={{ base: 12, md: 3 }}>
             <Image
               src={logo}
-              alt="Wejhati Logo"
+              alt={t('general.wejhati')}
               width={150}
               height={50}
               style={{ objectFit: 'cover' }}
@@ -80,7 +92,7 @@ function Footer() {
           {/* Resources Section */}
           <Grid.Col span={{ base: 12, md: 3 }}>
             <Text size="18px" fw={500} mb="md">
-              Resources
+              {t('footer.resources')}
             </Text>
             <Stack gap="xs">
               {RESOURCES.map((element) => (
@@ -92,7 +104,7 @@ function Footer() {
                   size="14px"
                   fw="400"
                 >
-                  {element.label.replace('-', ' ')}
+                  {element.label}
                 </Anchor>
               ))}
             </Stack>
@@ -101,7 +113,7 @@ function Footer() {
           {/* Tickets Section */}
           <Grid.Col span={{ base: 12, md: 3 }}>
             <Text size="18px" fw={500} mb="md">
-              Tickets
+              {t('footer.tickets')}
             </Text>
             <Stack gap="xs">
               {MY_TICKETS.map((element) => (
@@ -113,7 +125,7 @@ function Footer() {
                   size="14px"
                   fw="400"
                 >
-                  {element.text.replace('-', ' ')}
+                  {element.text}
                 </Anchor>
               ))}
             </Stack>
@@ -122,33 +134,40 @@ function Footer() {
           {/* Contact Us Section */}
           <Grid.Col span={{ base: 12, md: 3 }}>
             <Text size="18px" fw={500} mb="md">
-              Contact Us
+              {t('footer.contact-us')}
             </Text>
             <Stack gap="xs">
               {CONTACT_US.map((item) => (
                 <Box key={item.id}>
-                  {item.label !== 'social-media' ? (
+                  {item.label !== t('footer.social-media') ? (
                     <Box>
                       <Text c="#BEB7C8" size="xs" fw={500} tt="uppercase">
                         {item.label}
                       </Text>
-                      <Anchor
-                        href={
-                          item.label === 'email'
-                            ? `mailto:${item.link}`
-                            : `tel:${item.link}`
-                        }
-                        c="gray.4"
-                        size="14px"
-                        fw="400"
-                      >
-                        {item.link}
-                      </Anchor>
+                      {'link' in item ? (
+                        <Anchor
+                          href={`mailto:${item.link}`}
+                          c="gray.4"
+                          size="14px"
+                          fw="400"
+                        >
+                          {item.link}
+                        </Anchor>
+                      ) : 'tel' in item ? (
+                        <Anchor
+                          href={`tel:${item.tel}`}
+                          c="gray.4"
+                          size="14px"
+                          fw="400"
+                        >
+                          {item.tel}
+                        </Anchor>
+                      ) : null}
                     </Box>
                   ) : (
                     <Box>
                       <Text c="#BEB7C8" size="xs" fw={400}>
-                        {item.label.replace('-', ' ')}
+                        {item.label}
                       </Text>
                       <Group gap="sm">
                         {SOCIALS.map((social) => (
@@ -176,11 +195,11 @@ function Footer() {
         <Group justify="space-between" align="center" wrap="wrap" pb={36}>
           <Group gap="md" wrap="wrap">
             <Text size="14px" fw="400" c="gray.5">
-              © 2024 Wejhati. All rights reserved.
+              {t('footer.rights', { value: '2024' })}
             </Text>
             <Divider orientation="vertical" color="#323331" />
             <Text size="14px" fw="400" c="gray.5">
-              Developed by{' '}
+              {t('footer.glow')}{' '}
               <Anchor href="#" size="14px" fw="400" c="#fff">
                 Glow
               </Anchor>
@@ -188,10 +207,10 @@ function Footer() {
           </Group>
           <Group gap="sm">
             <Anchor href="#" size="14px" fw="400" c="white">
-              Terms and Conditions
+              {t('footer.terms-and-conditions')}
             </Anchor>
             <Anchor href="#" size="14px" fw="400" c="white">
-              Privacy Policy
+              {t('footer.privacy-policy')}
             </Anchor>
           </Group>
         </Group>
@@ -199,5 +218,3 @@ function Footer() {
     </Box>
   );
 }
-
-export default Footer;

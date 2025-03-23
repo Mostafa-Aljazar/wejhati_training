@@ -1,15 +1,20 @@
 'use client';
 import { squares_menu } from '@/assets/common';
-import { MY_TICKETS, NAV_ITEMS } from '@/contents/common/navbar';
+import { GET_MY_TICKETS, GET_NAV_ITEMS } from '@/contents/common/navbar';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/utility/cn';
 import { Box, Collapse, Drawer, Stack } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { ChevronUp, CircleX } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useMemo } from 'react';
 
 export default function Nav_Drawer() {
+  const t = useTranslations();
+  const MY_TICKETS = GET_MY_TICKETS(t);
+  const NAV_ITEMS = GET_NAV_ITEMS(t);
+
   const [opened, { open, close }] = useDisclosure(false);
   const [isMyTicketsOpen, { toggle: toggleMyTickets }] = useDisclosure(true);
 

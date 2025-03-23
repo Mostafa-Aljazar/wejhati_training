@@ -6,7 +6,7 @@
     "departures": "المغادرات",
     "return-passenger": "العودة",
     "provider": "المزود",
-    "wejhati": "وجْهتي",
+    "wejhati": "وجهتي",
     "cancel": "إلغاء",
     "fail-notification-title": "فشل!",
     "success-notification-title": "نجاح!",
@@ -18,7 +18,7 @@
     "trip-types": {
       "all": "الكل",
       "oneWay": "ذهاب فقط",
-      "Round": "ذهاب وعودة"
+      "Round": "ذهاب وإياب"
     },
     "seats_available": "{value} مقاعد متاحة",
     "copied": "تم النسخ",
@@ -26,7 +26,7 @@
     "search": "بحث",
     "date-range-input-placeholder": "اختر التواريخ",
     "date-input-placeholder": "اختر التاريخ",
-    "date": "تاريخ الرحلة",
+    "date": "التاريخ",
     "time": "الوقت",
     "filter": "تصفية",
     "trip-type": "نوع الرحلة",
@@ -63,23 +63,18 @@
     "brand": "العلامة التجارية",
     "save": "حفظ",
     "delete": "حذف",
-    "next": "التالي",
-    "departure_required": "المغادرة مطلوبة",
-    "arrival_required": "الوصول مطلوب",
-    "date_required": "التاريخ مطلوب",
-    "departure_date_required": "تاريخ المغادرة مطلوب",
-    "return_date_required": "تاريخ العودة مطلوب"
+    "next": "التالي"
   },
   "errors": {
     "required_error": "مطلوب*",
-    "Invalid_email": "بريد إلكتروني غير صالح*",
+    "Invalid_email": "معرف بريد إلكتروني غير صالح*",
     "Incorrect_password": "كلمة مرور غير صحيحة*",
     "Invalid_email_format": "تنسيق بريد إلكتروني غير صالح*",
-    "Invalid_password_format": "استخدم 6 أحرف أو أكثر",
-    "Passwords_do_not_match": "كلمات المرور غير متطابقة",
+    "Invalid_password_format": "استخدم 6+ أحرف",
+    "Passwords_do_not_match": "كلمات المرور لا تتطابق",
     "Invalid_otp": "رمز OTP غير صالح*",
     "Time_out": "انتهى الوقت*",
-    "Same_Station_Error": "محطة الوصول لا يمكن أن تكون نفس محطة المغادرة",
+    "Same_Station_Error": "لا يمكن أن تكون محطة الوصول نفسها محطة المغادرة",
     "Return_Date_After_Departure": "يجب أن يكون تاريخ العودة بعد تاريخ المغادرة"
   },
   "Auth": {
@@ -94,7 +89,7 @@
     "left_section": {
       "source": "forget-password",
       "auth": {
-        "text": "استكشف الرحلات أو أدر الخدمات",
+        "text": "استكشف الرحلات أو إدارة الخدمات",
         "button": "اختر دورك للبدء"
       },
       "sign_in": {
@@ -114,7 +109,7 @@
       },
       "Service_Provider": {
         "title": "مزود الخدمة",
-        "text": "ادخل إلى لوحة التحكم لإدارة الرحلات والحجوزات ودعم العملاء.",
+        "text": "ادخل إلى لوحة التحكم الخاصة بك لإدارة الرحلات والحجوزات ودعم العملاء.",
         "link": "/auth/login?type=provider"
       },
       "select": "اختر"
@@ -123,11 +118,11 @@
       "title": "إنشاء حساب جديد",
       "inputs": {
         "email": {
-          "text": "البريد الإلكتروني",
+          "text": "معرف البريد الإلكتروني",
           "placeholder": "أدخل بريدك الإلكتروني"
         }
       },
-      "button": "تأكيد OTP",
+      "button": "التحقق من OTP",
       "or": "أو",
       "have_account": "لديك حساب بالفعل؟",
       "login": "تسجيل الدخول"
@@ -142,41 +137,41 @@
       "title": "تسجيل الدخول",
       "inputs": {
         "email": {
-          "text": "البريد الإلكتروني",
+          "text": "معرف البريد الإلكتروني",
           "placeholder": "أدخل بريدك الإلكتروني"
         },
         "password": {
           "text": "كلمة المرور",
-          "placeholder": "أدخل كلمة المرور"
+          "placeholder": "أدخل كلمة المرور الخاصة بك"
         }
       },
       "forget_password": "نسيت كلمة المرور؟",
       "button": "متابعة",
       "or": "أو",
       "dont_have_account": "ليس لديك حساب؟",
-      "sign_up": "إنشاء حساب"
+      "sign_up": "اشترك"
     },
     "forget_password": {
       "title": "نسيت كلمة المرور!",
       "text": "أدخل بريدك الإلكتروني، وسنرسل لك رمز OTP لإعادة تعيين كلمة مرور حسابك بأمان.",
       "inputs": {
         "email": {
-          "text": "البريد الإلكتروني",
+          "text": "معرف البريد الإلكتروني",
           "placeholder": "أدخل بريدك الإلكتروني"
         }
       },
-      "button": "تأكيد OTP",
+      "button": "التحقق من OTP",
       "or": "أو",
       "have_account": "لديك حساب بالفعل؟",
       "login": "تسجيل الدخول"
     },
     "create_new_password": {
       "title": "إنشاء كلمة مرور جديدة",
-      "text": "عيّن كلمة مرور قوية وآمنة لحماية حسابك.",
+      "text": "حدد كلمة مرور قوية وآمنة لحماية حسابك.",
       "inputs": {
         "new_password": {
           "text": "كلمة المرور الجديدة",
-          "placeholder": "أدخل كلمة المرور"
+          "placeholder": "أدخل كلمة المرور الخاصة بك"
         },
         "confirm_password": {
           "text": "تأكيد كلمة المرور",
@@ -219,6 +214,8 @@
     }
   },
   "footer": {
+    "image-cover": "غلاف الصورة",
+    "image-curve": "منحنى الصورة",
     "home": "الرئيسية",
     "about-us": "من نحن",
     "contact-us": "اتصل بنا",
@@ -227,13 +224,13 @@
     "booking-enquirer": "استفسار الحجز",
     "book-tickets": "حجز التذاكر",
     "cancellation": "الإلغاء",
-    "resources": "المصادر",
+    "resources": "الموارد",
     "tickets": "التذاكر",
-    "rights": "© {value} وجْهتي. جميع الحقوق محفوظة.",
+    "rights": "© {value} وجهتي. جميع الحقوق محفوظة.",
     "ticket-conditions": "شروط التذاكر",
     "transport": "وزارة النقل والخدمات اللوجستية",
     "transport-authority": "الهيئة العامة للنقل",
-    "terms-and-conditions": "الشروط والأحكام،",
+    "terms-and-conditions": "الشروط والأحكام",
     "glow": "تم التطوير بواسطة Glow",
     "privacy-policy": "سياسة الخصوصية",
     "email": "البريد الإلكتروني:",
@@ -241,7 +238,7 @@
     "social-media": "وسائل التواصل الاجتماعي"
   },
   "nav-bar": {
-    "sign-up": "إنشاء حساب",
+    "sign-up": "اشترك",
     "login": "تسجيل الدخول",
     "home": "الرئيسية",
     "about-us": "من نحن",

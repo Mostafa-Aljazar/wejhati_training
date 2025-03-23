@@ -1,11 +1,14 @@
 'use client';
-import { MY_TICKETS } from '@/contents/common/navbar';
+import { GET_MY_TICKETS } from '@/contents/common/navbar';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/utility/cn';
 import { Button, Popover, Stack } from '@mantine/core';
+import { useTranslations } from 'next-intl';
 import React, { useMemo, useState } from 'react';
 
 export default function Nav_Tickets() {
+  const t = useTranslations();
+  const MY_TICKETS = GET_MY_TICKETS(t);
   const [opened, setOpened] = useState(false);
   const pathname = usePathname();
 
@@ -55,7 +58,7 @@ export default function Nav_Tickets() {
             isAnyTicketActive && 'font-bold text-[#F19A07]',
           )}
         >
-          My Tickets
+          {t('nav-bar.my-tickets')}
         </div>
       </Popover.Target>
 
