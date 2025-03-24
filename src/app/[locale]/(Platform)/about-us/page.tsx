@@ -6,6 +6,7 @@ import {
   Vehicle_en,
 } from '@/assets/about_us';
 import { Hero_Curve } from '@/assets/home';
+import Back_Button from '@/components/common/Back_Button';
 import { useRouter } from '@/i18n/navigation';
 import {
   ActionIcon,
@@ -25,7 +26,6 @@ import Image from 'next/image';
 
 export default function About_US() {
   const t = useTranslations('platform.about');
-  const router = useRouter();
   const locale = useLocale();
   return (
     <>
@@ -38,15 +38,7 @@ export default function About_US() {
         bg={'#FEF3E1'}
         hiddenFrom="lg"
       >
-        <ActionIcon
-          variant="white"
-          w={30}
-          h={30}
-          className="!rounded-full"
-          onClick={() => router.back()}
-        >
-          <ArrowLeft size={18} color="#000" />
-        </ActionIcon>
+        <Back_Button />
         <Text c={'About Us'} fw={600} fz={16}>
           {t('title')}
         </Text>

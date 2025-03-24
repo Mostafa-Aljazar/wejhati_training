@@ -7,6 +7,11 @@ import {
 import { Amman, Damascus, Riyadh, Sanaa } from '@/assets/home/Popular_Cities';
 import { PLATFORM_ROUTES } from '../routes/routes';
 
+export const User_Type = {
+  User: 'user',
+  Provider: 'provider',
+};
+
 export const TabTypes = {
   One_Way: 'One way',
   Round_Trip: 'Round trip',

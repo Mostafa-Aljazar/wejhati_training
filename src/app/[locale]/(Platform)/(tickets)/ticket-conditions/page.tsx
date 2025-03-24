@@ -1,15 +1,13 @@
 'use client';
-import { ActionIcon, Box, Flex, Text, Title } from '@mantine/core';
+import { Box, Flex, Text, Title } from '@mantine/core';
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { GET_CONDITIONS } from '@/contents/tickets/Tickets_Conditions';
-import { IconArrowLeft, IconCircleArrowLeft } from '@tabler/icons-react';
+import Back_Button from '@/components/common/Back_Button';
 
 export default function Tickets_Conditions() {
   const t = useTranslations('platform.my-tickets.tickets-conditions');
   const Conditions = GET_CONDITIONS(t);
-  const router = useRouter();
 
   return (
     <Flex
@@ -29,23 +27,7 @@ export default function Tickets_Conditions() {
         w="100%"
         h={{ base: 80, md: 'auto' }}
       >
-        <ActionIcon
-          variant="transparent"
-          size={40}
-          radius="xl"
-          bg="#F9F8F6"
-          onClick={() => router.back()}
-        >
-          <IconCircleArrowLeft
-            color="#817C74"
-            className="hidden lg:block rtl:rotate-180"
-          />
-          <IconArrowLeft
-            color="#817C74"
-            size={24}
-            className="lg:hidden block rtl:rotate-180"
-          />
-        </ActionIcon>
+        <Back_Button />
         <Title order={2} c="#2B261E" fw={600} fz={{ base: 16, md: 20, lg: 24 }}>
           {t('title')}
         </Title>

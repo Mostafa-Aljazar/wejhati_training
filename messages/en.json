@@ -222,6 +222,60 @@
       "Mission": "Mission",
       "Mission_text": " We strive to deliver a safe and seamless ground transportation experience by offering travelers comfortable journeys and various options. Our goal is to simplify booking processes and trip management while empowering transport companies to improve their services and expand their operations confidently and professionally."
     },
+    "contact-us": {
+      "title": "Contact us",
+      "tabs": {
+        "Send_Enquiries": "Send Enquiries",
+        "Complaints": "Complaints",
+        "Suggestions": "Suggestions",
+        "Refund_Request": "Refund request",
+        "Traveler": "Traveler",
+        "Provider": "Service Provider"
+      },
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Enter your name"
+        },
+        "booking_code_number": {
+          "label": "Booking number (Optional)",
+          "placeholder": "Enter your Booking number"
+        },
+        "provider_code_number": {
+          "label": "Service provider ID numbers",
+          "placeholder": "Enter your ID number"
+        },
+        "email": {
+          "label": "Email ID",
+          "placeholder": "Enter your email id"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "Enter your message title"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Enter your message"
+        },
+        "bank": {
+          "title": "Enter your bank details",
+          "description": "Please provide your bank account details for the refund.",
+          "IBAN": {
+            "label": "IBAN",
+            "placeholder": "Account IBAN"
+          },
+          "bank_name": {
+            "label": "Bank Name",
+            "placeholder": "Enter bank name."
+          },
+          "account_name": {
+            "label": "Account name",
+            "placeholder": "Enter your account name"
+          }
+        },
+        "submit": "Submit"
+      }
+    },
     "my-tickets": {
       "tickets-conditions": {
         "title": "Tickets Conditions",

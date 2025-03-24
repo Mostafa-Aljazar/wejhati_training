@@ -286,6 +286,60 @@
           "body": "بشرائك تذكرة من الشركة، فإنك تقر وتوافق على جميع الشروط والأحكام المذكورة."
         }
       }
+    },
+    "contact-us": {
+      "title": "اتصل بنا",
+      "tabs": {
+        "Traveler": "المسافر",
+        "Provider": "مزود الخدمة",
+        "Complaints": "شكاوى",
+        "Refund_Request": "طلب استرداد",
+        "Send_Enquiries": "أرسل الاستفسارات",
+        "Suggestions": "اقتراحات"
+      },
+      "form": {
+        "name": {
+          "label": "اسم",
+          "placeholder": "أدخل اسمك"
+        },
+        "email": {
+          "label": "معرف البريد الإلكتروني",
+          "placeholder": "أدخل معرف البريد الإلكتروني الخاص بك"
+        },
+        "subject": {
+          "label": "موضوع",
+          "placeholder": "أدخل عنوان رسالتك"
+        },
+        "booking_code_number": {
+          "label": "رقم الحجز (اختياري)",
+          "placeholder": "أدخل رقم الحجز الخاص بك"
+        },
+        "provider_code_number": {
+          "label": "أرقام هوية مزود الخدمة",
+          "placeholder": "أدخل رقم الهوية الخاص بك"
+        },
+        "message": {
+          "label": "رسالة",
+          "placeholder": "أدخل رسالتك"
+        },
+        "bank": {
+          "title": "أدخل تفاصيل البنوك الخاصة بك",
+          "description": "يرجى تقديم تفاصيل حسابك المصرفي لاسترداد الأموال.",
+          "IBAN": {
+            "label": "إيبان",
+            "placeholder": "حساب IBAN"
+          },
+          "bank_name": {
+            "label": "اسم البنك",
+            "placeholder": "أدخل الاسم المصرفي."
+          },
+          "account_name": {
+            "label": "إسم الحساب",
+            "placeholder": "أدخل اسم حسابك"
+          }
+        },
+        "submit": "ارسال"
+      }
     }
   },
   "footer": {
