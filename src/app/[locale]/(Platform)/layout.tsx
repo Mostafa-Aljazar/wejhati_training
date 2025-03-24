@@ -20,10 +20,10 @@ export default function Platform_Layout({
         collapsed: { desktop: true, mobile: true },
       }}
       withBorder={false}
-      className="w-full min-h-screen flex flex-col"
+      className="flex flex-col w-full min-h-screen"
     >
       <Navbar />
-      <AppShell.Main className="w-full h-full flex-1 flex flex-col">
+      <AppShell.Main className="flex flex-col flex-1 w-full h-full">
         {children}
       </AppShell.Main>
       <Footer />

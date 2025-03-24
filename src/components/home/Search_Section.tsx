@@ -16,6 +16,8 @@ import { cn } from '@/utility/cn';
 import { useTranslations } from 'next-intl';
 import { TabTypes } from '@/contents/home';
 import Trip_Form from './Trip_Form';
+import { Link } from '@/i18n/navigation';
+import { PLATFORM_ROUTES } from '@/contents/routes/routes';
 
 export default function Search_Section() {
   const tGen = useTranslations('general'); // For general translations
@@ -61,30 +63,34 @@ export default function Search_Section() {
     <Fieldset
       legend={
         <Group className="!gap-3 !lg:gap-10 px-5">
-          <Button
-            w={137}
-            h={32}
-            color="primary"
-            fz={14}
-            fw={400}
-            radius="md"
-            className="!p-0"
-          >
-            {tNav('book-tickets')}
-          </Button>
-          <Button
-            variant="light"
-            w={137}
-            h={32}
-            color="white"
-            fz={14}
-            fw={400}
-            radius="md"
-            bg="#231D1DC2"
-            className="!p-0"
-          >
-            {tNav('booking-enquirer')}
-          </Button>
+          <Link href={PLATFORM_ROUTES.Home}>
+            <Button
+              w={137}
+              h={32}
+              color="primary"
+              fz={14}
+              fw={400}
+              radius="md"
+              className="!p-0"
+            >
+              {tNav('book-tickets')}
+            </Button>
+          </Link>
+          <Link href={PLATFORM_ROUTES.BOOKING_ENQUIRER}>
+            <Button
+              variant="light"
+              w={137}
+              h={32}
+              color="white"
+              fz={14}
+              fw={400}
+              radius="md"
+              bg="#231D1DC2"
+              className="!p-0"
+            >
+              {tNav('booking-enquirer')}
+            </Button>
+          </Link>
         </Group>
       }
       radius={12}

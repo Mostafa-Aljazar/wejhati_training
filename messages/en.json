@@ -339,6 +339,22 @@
           "title": "Acceptance of Terms",
           "body": "By purchasing a ticket from the company, you acknowledge and agree to all the terms and conditions stated."
         }
+      },
+      "booking-enquiry": {
+        "title": "Booking enquiry",
+        "search": {
+          "hint": "*View your ticket details, download a PDF copy, or make changes to your booking.",
+          "inputs": {
+            "ticket_id": {
+              "label": "Ticket ID",
+              "placeholder": "Enter your ticket ID here"
+            },
+            "mobile_number": {
+              "label": "Mobile number",
+              "placeholder": "Enter you mobile number here"
+            }
+          }
+        }
       }
     }
   },
