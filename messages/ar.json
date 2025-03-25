@@ -75,7 +75,8 @@
     "Invalid_otp": "رمز OTP غير صحيح*",
     "Time_out": "انتهى الوقت*",
     "Same_Station_Error": "محطة الوصول لا يمكن أن تكون نفس محطة المغادرة",
-    "Return_Date_After_Departure": "تاريخ العودة يجب أن يكون بعد تاريخ المغادرة"
+    "Return_Date_After_Departure": "تاريخ العودة يجب أن يكون بعد تاريخ المغادرة",
+    "Invalid_input_more_2": "يجب أن يكون لديك ما لا يقل عن 2أحرف"
   },
   "Auth": {
     "routes": {
@@ -358,6 +359,41 @@
           }
         },
         "submit": "ارسال"
+      }
+    },
+    "profile": {
+      "title": "حساب تعريفي",
+      "tabs": {
+        "My_Bookings": "حجوزاتي",
+        "My_Profile": "ملفي الشخصي"
+      },
+      "Invalid_input_more_2": "",
+      "my-profile": {
+        "form": {
+          "last-name": {
+            "label": "اسم العائلة",
+            "placeholder": "أدخل اسمك الأخير"
+          },
+          "first-name": {
+            "placeholder": "أدخل اسمك الأول",
+            "label": "الاسم الأول"
+          },
+          "email": {
+            "hint": "سيتم إرسال OTP إلى معرف البريد الإلكتروني الخاص بك للتحقق!",
+            "placeholder": "أدخل معرف البريد الإلكتروني الخاص بك",
+            "label": "معرف البريد الإلكتروني"
+          },
+          "mobile-number": {
+            "hint": "سيتم إرسال OTP إلى رقم هاتفك المحمول للتحقق!",
+            "label": "رقم الهاتف المحمول"
+          },
+          "passport-number": {
+            "placeholder": "أدخل رقم جواز السفر الخاص بك",
+            "label": "رقم جواز السفر"
+          },
+          "edit": "تعديل",
+          "add": "اضافة"
+        }
       }
     }
   },

@@ -63,7 +63,8 @@
     "brand": "Brand",
     "save": "Save",
     "delete": "Delete",
-    "next": "Next"
+    "next": "Next",
+    "verify-otp": "Verify OTP"
   },
   "errors": {
     "required_error": "required*",
@@ -71,6 +72,8 @@
     "Incorrect_password": "Incorrect password*",
     "Invalid_email_format": "Invalid email format*",
     "Invalid_password_format": "Use 6+ characters",
+    "Invalid_mobile_format": "Invalid mobile number*",
+    "Invalid_input_more_2": "must have at least 2 letters",
     "Passwords_do_not_match": "Passwords do not match",
     "Invalid_otp": "Invalid OTP*",
     "Time_out": "Time out*",
@@ -274,6 +277,48 @@
           }
         },
         "submit": "Submit"
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "tabs": {
+        "My_Profile": "My profile",
+        "My_Bookings": "My bookings"
+      },
+      "my-profile": {
+        "form": {
+          "first-name": {
+            "label": "First name",
+            "placeholder": "Enter your first name"
+          },
+          "last-name": {
+            "label": "Last name",
+            "placeholder": "Enter your last name"
+          },
+          "passport-number": {
+            "label": "Passport number",
+            "placeholder": "Enter your passport number"
+          },
+          "email": {
+            "label": "Email ID",
+            "placeholder": "Enter your email id",
+            "hint": "An OTP will be sent to your email ID to verify!"
+          },
+          "mobile-number": {
+            "label": "Mobile number",
+            "placeholder": "Enter your Mobile number",
+            "hint": "An OTP will be sent to your mobile Number to verify!"
+          },
+          "edit": "Edit",
+          "add": "Add"
+        },
+        "otp": {
+          "add-title": "Enter OTP to proceed!",
+          "edit-title": "Enter OTP to change number!",
+          "text": "Please enter the 4-digit OTP sent to your Email ID",
+          "resend": "Resend OTP",
+          "button": "Verify OTP"
+        }
       }
     },
     "my-tickets": {
