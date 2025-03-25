@@ -15,7 +15,7 @@ type OTPProps = {
 };
 export default function OTP({ onSuccess, operation }: OTPProps) {
   const errors = useTranslations('errors');
-  const t = useTranslations('Auth.otp');
+  const t = useTranslations('platform.profile.my-profile.otp');
 
   const router = useRouter();
 
@@ -107,7 +107,7 @@ export default function OTP({ onSuccess, operation }: OTPProps) {
       className="md:rounded-[12px] lg:w-[550px]"
     >
       <Text fw={'500'} fz={{ base: 24, lg: 30 }} ta={'center'}>
-        {t('title')}
+        {operation === 'Add' ? t('add-title') : t('edit-title')}
       </Text>
       <Text
         mt={12}
