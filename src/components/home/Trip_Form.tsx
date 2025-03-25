@@ -66,7 +66,7 @@ export default function Trip_Form({ tripType, Children, Adults }: Props) {
       dateRange?: [Date | null, Date | null];
     },
     validate: zodResolver(
-      tripType === 'One_Way' ? oneWaySchema : roundTripSchema,
+      tripType === 'One_Way' ? oneWaySchema : roundTripSchema
     ),
   });
 

@@ -301,6 +301,9 @@
             }
           }
         }
+      },
+      "trips-schedule": {
+        "title": "جدول الرحلات"
       }
     },
     "contact-us": {

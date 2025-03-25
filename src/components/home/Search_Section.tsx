@@ -15,9 +15,9 @@ import React, { useState } from 'react';
 import { cn } from '@/utility/cn';
 import { useTranslations } from 'next-intl';
 import { TabTypes } from '@/contents/home';
-import Trip_Form from './Trip_Form';
 import { Link } from '@/i18n/navigation';
 import { PLATFORM_ROUTES } from '@/contents/routes/routes';
+import Trip_Form from './Trip_Form';
 
 export default function Search_Section() {
   const tGen = useTranslations('general'); // For general translations
